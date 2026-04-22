@@ -162,81 +162,77 @@ _本简报由 Claude Code Routine 自动生成,如需调整偏好请修改 skill
 
 ## 推送步骤
 
-生成好 Markdown 内容后,通过 Slack Connector 推送。
+生成好内容后，**优先使用 Slack MCP 工具**推送，curl webhook 作为降级方案。
 
-### 推送方式：Slack Connector（Claude Code 原生集成）
+### 推送方式一（主推）：Slack MCP 工具
 
-Slack Connector 是 Claude Code 提供的原生连接器，用于直接推送消息到 Slack。
+直接调用 `mcp__Slack__slack_send_message`，无需配置 webhook。
 
-**配置要求:**
-1. 在 Slack Workspace 中创建 Incoming Webhook
-2. 获取 Webhook URL: `https://hooks.slack.com/services/T.../B.../XXX`
-3. 在 Claude Code 中配置环境变量:
-   ```bash
-   export SLACK_WEBHOOK_URL="https://hooks.slack.com/services/..."
-   ```
+**固定频道：**
+- 频道名：`#news`
+- 频道 ID：`C0AUAEKABAP`（jackliugroup workspace）
 
-**推送代码逻辑:**
-```python
-import urllib.request
-import json
+**消息格式规则（必须遵守，否则报 invalid_blocks）：**
+- 使用 Slack mrkdwn 格式，**不是** Markdown
+- 加粗：`*文字*`（不是 `**文字**`）
+- 链接：`<URL|显示文字>`（不是 `[文字](URL)`）
+- 分隔线：**不要使用 `---`**，会导致 invalid_blocks 错误
+- 每条消息控制在 **1500 字以内**；内容较多时拆成多条，后续条目用 `thread_ts` 回复到同一线程
 
-def push_to_slack(webhook_url: str, content: str) -> bool:
-    """通过 Slack Webhook 推送"""
-    
-    slack_message = {
-        "text": "📰 今日科技简报",
-        "blocks": [
-            {
-                "type": "header",
-                "text": {
-                    "type": "plain_text",
-                    "text": "📰 今日科技简报",
-                    "emoji": True
-                }
-            },
-            {
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": content  # Markdown 内容
-                }
-            }
-        ]
-    }
-    
-    # 通过 Slack Connector 推送
-    data = json.dumps(slack_message).encode('utf-8')
-    req = urllib.request.Request(
-        webhook_url,
-        data=data,
-        headers={'Content-Type': 'application/json'},
-        method='POST'
-    )
-    
-    response = urllib.request.urlopen(req)
-    return response.read().decode('utf-8') == 'ok'
+**推送模板：**
+```
+第一条（发到频道）：
+📰 *今日科技简报 (YYYY-MM-DD)*
+
+*🔥 必读*
+
+*1. 标题*
+摘要（含 who/what/数字）
+🔗 <URL|原文> · 来源名
+
+*2. 标题*
+...
+
+第二条（用 thread_ts 回复）：
+*👀 值得看*
+...
+
+*📌 简讯*
+• <URL|标题> · 来源
+...
+
+_本简报由 Claude Code Routine 自动生成_
 ```
 
-**推送后检查返回:**
-- 返回 `ok` 表示成功
-- 其他返回值或异常表示失败,记录日志,必要时重试 1 次
+**调用示例：**
+```
+# 第一条
+mcp__Slack__slack_send_message(
+    channel_id="C0AUAEKABAP",
+    message="📰 *今日科技简报 (2026-04-22)*\n\n*🔥 必读*\n..."
+)
+# 保存返回的 message_ts
 
-**Slack 优势:**
-- ✅ 无推送频率限制（不像 Server 酱每天 5 条）
-- ✅ 支持富文本格式（Block Kit）
-- ✅ 支持线程回复、表情反应
-- ✅ 消息永久存档，支持搜索
-- ✅ 无需额外的第三方服务（Slack 官方 API）
+# 后续条目作为线程回复
+mcp__Slack__slack_send_message(
+    channel_id="C0AUAEKABAP",
+    thread_ts="<上一条的 message_ts>",
+    message="*👀 值得看*\n..."
+)
+```
+
+### 推送方式二（降级）：curl SLACK_WEBHOOK_URL
+
+仅在 MCP 工具不可用时使用。注意：`SLACK_WEBHOOK_URL` 环境变量可能已过期（返回 403），优先排查 MCP 方式。
 
 ---
 
 ## 异常处理
 
-- **所有信息源都访问失败:** 推送一条"今日新闻抓取失败,请检查网络或源站可用性"到 Slack,并退出
-- **Slack 推送失败:** 把内容保存到 repo 的 `last_failed.md`,方便下次运行时重试或人工查看
-- **内容为空:** 推送"今日无重点新闻,保持关注"
-- **SLACK_WEBHOOK_URL 未设置:** 输出错误日志,提示配置缺失
+- **所有信息源都访问失败:** 推送一条"今日新闻抓取失败，请检查网络或源站可用性"到 Slack，并退出
+- **MCP 推送失败 + webhook 也失败:** 把内容保存到 repo 的 `last_failed.md`，方便下次运行时重试或人工查看
+- **内容为空:** 推送"今日无重点新闻，保持关注"
+- **消息格式错误（invalid_blocks）:** 检查是否使用了 `---`、`**bold**` 或 `[text](url)` 等 Markdown 格式，改为 Slack mrkdwn 格式
 
 ---
 
