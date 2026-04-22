@@ -2,6 +2,7 @@
   "history": [
     {
       "date": "2026-04-22",
+      "push_method": "mcp__Slack__slack_send_message",
       "items": [
         {
           "title": "Claude 4.0 发布新的长文本处理能力",
