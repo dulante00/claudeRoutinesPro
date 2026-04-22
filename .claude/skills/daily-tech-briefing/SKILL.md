@@ -58,6 +58,7 @@ date +%Y-%m-%d
 - 同一事件的重复报道(只保留最权威一家)
 - 纯观点文章、无新事实的评论
 - 炒作性质的"AI 要取代 XX 职业"类内容
+- **无法提炼出具体名称+数字的模糊报道**（如"多家公司纷纷布局 AI"此类无实质内容的综述）
 
 ---
 
@@ -104,10 +105,31 @@ _本简报由 Claude Code Routine 自动生成,如需调整偏好请修改 skill
 
 **格式要点:**
 - 所有内容必须中文,英文标题需翻译(可保留原文在括号里)
-- 摘要要有信息量,别写"某某公司发布新模型,详情见原文"这种废话
 - 数字、模型名、产品名用英文原文保留(如 GPT-5、Claude 4.7)
 - 如果 24 小时内真的没有值得推的内容,直接推 "今日无重点新闻,保持关注" 即可,不要硬凑
 - Slack 消息使用 Block Kit 富文本格式,支持链接、加粗、代码块等
+
+**摘要质量强制要求（每条新闻必须包含以下要素,缺少则不得发布）:**
+
+1. **Who（主体）** — 明确写出公司/团队/作者名称,不得用"某公司""研究团队"等模糊词
+   - ✅ "Anthropic 发布 Claude Sonnet 4.6"
+   - ❌ "某 AI 公司发布新模型"
+
+2. **What（具体内容）** — 必须写出具体的模型名/技术名/产品名,禁止泛指
+   - ✅ "基于 GQA + Flash Attention 3 的量化方法"
+   - ❌ "新的量化技术"
+
+3. **数字/指标** — 有性能数字必须引用,无数字则说明具体功能变化
+   - ✅ "MMLU 提升 8 分,推理速度提升 3×,首 token 延迟降至 120ms"
+   - ❌ "性能大幅提升"
+
+4. **Why it matters（为何重要）** — 一句话说明对开发者/用户的实际影响
+
+**摘要自检清单（生成后逐条检查,不通过则重写）:**
+- [ ] 摘要中有具体名称,无"某某""相关"等模糊词
+- [ ] 包含至少一个可核实的具体数字或功能点
+- [ ] 读者无需点链接就能判断是否值得深入了解
+- [ ] 未使用以下禁用短语:"详情见原文"、"取得突破"(未说明是什么突破)、"大幅提升"(未量化)、"多家公司"(未点名)
 
 ---
 
@@ -220,13 +242,31 @@ def push_to_slack(webhook_url: str, content: str) -> bool:
 
 ## 执行流程总结
 
-1. 运行 `date +%Y-%m-%d` 获取今天日期,记为 `TODAY`
-2. 读取 `briefing_history.json` 获取近 7 天已推送列表
-3. 按优先级遍历信息源,抓取过去 24 小时内容(严格以 `TODAY` 为基准过滤年份和日期)
-3. 应用筛选规则 + 去重
-4. 按"必读 / 值得看 / 简讯"三档组织内容
-5. 生成中文 Markdown
-6. 通过 Bash curl 命令推送到 Slack（使用环境变量 SLACK_WEBHOOK_URL）
-7. 更新 `briefing_history.json`
-8. 输出本次推送摘要到 Routine 日志
+1. 切换到固定分支（参见 CLAUDE.md 分支策略）:
+   ```bash
+   git fetch origin
+   git checkout claude/daily-briefing 2>/dev/null || git checkout -b claude/daily-briefing origin/main
+   git pull origin claude/daily-briefing 2>/dev/null || true
+   ```
+2. 运行 `date +%Y-%m-%d` 获取今天日期,记为 `TODAY`
+3. 读取 `briefing_history.json` 获取近 7 天已推送列表
+4. 按优先级遍历信息源,抓取过去 24 小时内容(严格以 `TODAY` 为基准过滤年份和日期)
+5. 应用筛选规则 + 去重
+6. 按"必读 / 值得看 / 简讯"三档组织内容
+7. 生成中文 Markdown
+8. 通过 Slack MCP 工具推送到 #news 频道（优先）；若不可用则 curl SLACK_WEBHOOK_URL
+9. 推送成功后:
+   - 更新 `briefing_history.json`
+   - `git add briefing_history.json && git commit -m "📰 更新 TODAY 科技简报"`
+   - `git push -u origin claude/daily-briefing`
+10. **合并到 main**（有实质改动时执行）:
+    ```bash
+    git checkout main
+    git pull origin main
+    git merge claude/daily-briefing --no-ff -m "merge: daily-briefing TODAY"
+    git push origin main
+    git checkout claude/daily-briefing
+    ```
+    - 若合并冲突或 push 失败，保留分支现状，输出告警，**不强制合并**
+11. 输出本次推送摘要到 Routine 日志（含标题列表 + 合并状态）
 

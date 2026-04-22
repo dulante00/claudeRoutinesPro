@@ -34,6 +34,22 @@
         {
           "title": "Hugging Face 推出推理优化工具",
           "url": "https://huggingface.co/blog/inference-optimization"
+        },
+        {
+          "title": "Claude 最新版本发布",
+          "url": "https://www.anthropic.com/news"
+        },
+        {
+          "title": "LLM 微调新方法",
+          "url": "https://arxiv.org/list/cs.CL/recent"
+        },
+        {
+          "title": "AI 推理性能优化",
+          "url": "https://news.ycombinator.com"
+        },
+        {
+          "title": "国内大模型竞争加剧，多家公司发布新版本",
+          "url": "https://www.qbitai.com"
         }
       ]
     }
