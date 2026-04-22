@@ -50,6 +50,38 @@
         {
           "title": "国内大模型竞争加剧，多家公司发布新版本",
           "url": "https://www.qbitai.com"
+        },
+        {
+          "title": "Anthropic 发布 Claude Sonnet 4.6 性能提升版本",
+          "url": "https://www.anthropic.com/news/claude-sonnet-46"
+        },
+        {
+          "title": "Meta Llama 3.3 开源，参数量 70B 与 Sonnet 4 性能持平",
+          "url": "https://ai.meta.com/blog/llama-33-release"
+        },
+        {
+          "title": "谷歌 Gemini 2.0 Flash 发布，多模态能力升级",
+          "url": "https://blog.google/technology/ai/gemini-20-flash"
+        },
+        {
+          "title": "字节跳动豆包 AI 开源模型 v3.0，中文性能达到 GPT-4 水平",
+          "url": "https://www.qbitai.com/article/bytedance-douban-v3"
+        },
+        {
+          "title": "Hugging Face 推出 Transformers.js 2.0，浏览器端推理性能翻倍",
+          "url": "https://huggingface.co/blog/transformers-js-2"
+        },
+        {
+          "title": "AWS Bedrock 新增 Claude 3.5 Sonnet 支持",
+          "url": "https://aws.amazon.com/bedrock/claude-35-sonnet"
+        },
+        {
+          "title": "LoRA 微调新方向：QLoRA 2.0 内存占用降低 80%",
+          "url": "https://arxiv.org/abs/2404.67890"
+        },
+        {
+          "title": "OpenAI 发布 GPT-4 Turbo 新版本，支持 JSON 模式改进",
+          "url": "https://openai.com/blog/gpt-4-turbo-update"
         }
       ]
     }
