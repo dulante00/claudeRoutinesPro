@@ -242,13 +242,31 @@ def push_to_slack(webhook_url: str, content: str) -> bool:
 
 ## 执行流程总结
 
-1. 运行 `date +%Y-%m-%d` 获取今天日期,记为 `TODAY`
-2. 读取 `briefing_history.json` 获取近 7 天已推送列表
-3. 按优先级遍历信息源,抓取过去 24 小时内容(严格以 `TODAY` 为基准过滤年份和日期)
-3. 应用筛选规则 + 去重
-4. 按"必读 / 值得看 / 简讯"三档组织内容
-5. 生成中文 Markdown
-6. 通过 Bash curl 命令推送到 Slack（使用环境变量 SLACK_WEBHOOK_URL）
-7. 更新 `briefing_history.json`
-8. 输出本次推送摘要到 Routine 日志
+1. 切换到固定分支（参见 CLAUDE.md 分支策略）:
+   ```bash
+   git fetch origin
+   git checkout claude/daily-briefing 2>/dev/null || git checkout -b claude/daily-briefing origin/main
+   git pull origin claude/daily-briefing 2>/dev/null || true
+   ```
+2. 运行 `date +%Y-%m-%d` 获取今天日期,记为 `TODAY`
+3. 读取 `briefing_history.json` 获取近 7 天已推送列表
+4. 按优先级遍历信息源,抓取过去 24 小时内容(严格以 `TODAY` 为基准过滤年份和日期)
+5. 应用筛选规则 + 去重
+6. 按"必读 / 值得看 / 简讯"三档组织内容
+7. 生成中文 Markdown
+8. 通过 Slack MCP 工具推送到 #news 频道（优先）；若不可用则 curl SLACK_WEBHOOK_URL
+9. 推送成功后:
+   - 更新 `briefing_history.json`
+   - `git add briefing_history.json && git commit -m "📰 更新 TODAY 科技简报"`
+   - `git push -u origin claude/daily-briefing`
+10. **合并到 main**（有实质改动时执行）:
+    ```bash
+    git checkout main
+    git pull origin main
+    git merge claude/daily-briefing --no-ff -m "merge: daily-briefing TODAY"
+    git push origin main
+    git checkout claude/daily-briefing
+    ```
+    - 若合并冲突或 push 失败，保留分支现状，输出告警，**不强制合并**
+11. 输出本次推送摘要到 Routine 日志（含标题列表 + 合并状态）
 
