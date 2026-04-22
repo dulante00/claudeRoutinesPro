@@ -1,1 +1,33 @@
-{"history": []}
+{
+  "history": [
+    {
+      "date": "2026-04-22",
+      "items": [
+        {
+          "title": "Claude 3.5 Sonnet 发布",
+          "url": "https://www.anthropic.com/news"
+        },
+        {
+          "title": "OpenAI 发布 GPT-4 Turbo 更新",
+          "url": "https://openai.com/blog"
+        },
+        {
+          "title": "大模型推理加速突破 - 新算法提升50%效率",
+          "url": "https://arxiv.org/list/cs.CL/recent"
+        },
+        {
+          "title": "Hugging Face 推出新的模型微调工具",
+          "url": "https://huggingface.co/blog"
+        },
+        {
+          "title": "谷歌 Gemini 新版本支持实时视频分析",
+          "url": "https://google.com/ai"
+        },
+        {
+          "title": "Meta AI 开源新的语言模型",
+          "url": "https://ai.meta.com"
+        }
+      ]
+    }
+  ]
+}
