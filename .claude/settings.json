@@ -1,0 +1,15 @@
+{
+  "sandbox": {
+    "network": {
+      "allowedDomains": [
+        "hooks.slack.com",
+        "*.slack.com",
+        "slack.com"
+      ],
+      "allowLocalBinding": true
+    }
+  },
+  "env": {
+    "SLACK_WEBHOOK_URL": "https://hooks.slack.com/services/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"
+  }
+}
