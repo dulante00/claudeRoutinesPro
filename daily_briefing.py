@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """
-完整的每日科技简报脚本
-支持从多个源抓取、筛选、推送和去重
+每日科技简报 - Claude Code Routines 版本
+
+在 Claude Code Routines 沙箱中执行
+通知方式：Slack Webhook
+支持：定时执行、手动运行、历史记录去重
 """
 
 import json
 import os
 import re
 import sys
-import time
 import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta
@@ -18,7 +20,7 @@ class BriefingManager:
     """技术简报管理器"""
 
     def __init__(self):
-        self.sendkey = os.environ.get('SERVERCHAN_SENDKEY')
+        self.webhook_url = os.environ.get('SLACK_WEBHOOK_URL')
         self.history_file = 'briefing_history.json'
         self.today = datetime.now().strftime('%Y-%m-%d')
         self.history = self._load_history()
@@ -26,7 +28,7 @@ class BriefingManager:
         self.failed_content = None
 
     def _load_history(self) -> Dict:
-        """加载历史去重信息"""
+        """加载历史记录"""
         if os.path.exists(self.history_file):
             try:
                 with open(self.history_file, 'r', encoding='utf-8') as f:
@@ -65,7 +67,6 @@ class BriefingManager:
         """计算两个字符串的相似度"""
         if not s1 or not s2:
             return 0
-        # 简单的词袋相似度
         words1 = set(re.findall(r'\w+', s1.lower()))
         words2 = set(re.findall(r'\w+', s2.lower()))
         if not words1 or not words2:
@@ -83,7 +84,7 @@ class BriefingManager:
             'summary': summary,
             'url': url,
             'source': source,
-            'category': category  # 'hottest', 'important', 'brief'
+            'category': category
         })
         return True
 
@@ -132,14 +133,13 @@ class BriefingManager:
                 lines.append(f"- [{item['title']}]({item['url']}) · {item['source']}\n")
 
         lines.append("\n---\n")
-        lines.append("_本简报由 Claude Code Routine 自动生成，如需调整偏好请修改 skill 文件_")
+        lines.append("_本简报由 Claude Code Routine 自动生成_")
 
         return ''.join(lines)
 
     def push_to_slack(self, content: str) -> bool:
         """推送到 Slack"""
-        webhook_url = os.environ.get('SLACK_WEBHOOK_URL')
-        if not webhook_url:
+        if not self.webhook_url:
             print("❌ 错误: SLACK_WEBHOOK_URL 未设置")
             return False
 
@@ -179,7 +179,7 @@ class BriefingManager:
         try:
             data = json.dumps(slack_message).encode('utf-8')
             req = urllib.request.Request(
-                webhook_url,
+                self.webhook_url,
                 data=data,
                 headers={'Content-Type': 'application/json'},
                 method='POST'
@@ -200,11 +200,6 @@ class BriefingManager:
             print(f"❌ 推送异常: {str(e)}")
             self.failed_content = content
             return False
-
-    def push_to_wechat(self, content: str) -> bool:
-        """推送到微信（已废弃，请使用 push_to_slack）"""
-        print("⚠️  微信推送已改为 Slack，请更新配置")
-        return self.push_to_slack(content)
 
     def save_history(self) -> None:
         """保存历史记录"""
@@ -235,13 +230,6 @@ class BriefingManager:
             json.dump(self.history, f, ensure_ascii=False, indent=2)
         print(f"✅ 已更新历史记录")
 
-    def save_failed_content(self) -> None:
-        """保存失败的内容"""
-        if self.failed_content:
-            with open('last_failed.md', 'w', encoding='utf-8') as f:
-                f.write(self.failed_content)
-            print(f"💾 已保存失败内容到 last_failed.md")
-
     def print_summary(self) -> None:
         """输出推送摘要"""
         categorized = self.categorize_items()
@@ -266,8 +254,9 @@ class BriefingManager:
                 print(f"{i}. {emoji} {item['title']}")
         print(f"{'='*60}\n")
 
+
 def create_sample_briefing():
-    """创建示例简报内容（用于演示）"""
+    """创建示例简报内容"""
     sample_items = [
         {
             'title': 'Claude 3.5 Sonnet 发布',
@@ -314,35 +303,6 @@ def create_sample_briefing():
     ]
     return sample_items
 
-def save_push_command(content: str, sendkey: str) -> None:
-    """保存可手动执行的推送命令"""
-    import shlex
-
-    title = f"📰 今日科技简报 {datetime.now().strftime('%Y-%m-%d')}"
-
-    # 保存为 bash 脚本
-    cmd = f"""#!/bin/bash
-# 手动推送简报到微信
-# 在有网络权限的环境中运行此脚本
-
-SENDKEY="{sendkey}"
-TITLE="{title}"
-
-curl -X POST "https://sctapi.ftqq.com/${{SENDKEY}}.send" \\
-  --data-urlencode "title=${{TITLE}}" \\
-  --data-urlencode "desp=$(cat << 'EOF'
-{content}
-EOF
-)"
-
-echo "推送完成！"
-"""
-
-    with open('manual_push.sh', 'w') as f:
-        f.write(cmd)
-
-    print(f"💾 已保存推送脚本到 manual_push.sh")
-    print(f"   在有网络权限的环境中运行: bash manual_push.sh")
 
 def main():
     print("🚀 开始执行每日科技简报任务...\n")
@@ -379,16 +339,14 @@ def main():
     if manager.push_to_slack(content):
         manager.save_history()
         manager.print_summary()
-        # 保存手动推送脚本
-        if manager.sendkey:
-            save_push_command(content, manager.sendkey)
     else:
-        manager.save_failed_content()
-        # 保存手动推送脚本
-        if manager.sendkey and content:
-            save_push_command(content, manager.sendkey)
-        print("❌ 自动推送失败")
-        print("💡 已生成 manual_push.sh，可在有网络权限的环境中手动执行")
+        print("❌ 推送失败")
+        if manager.failed_content:
+            with open('last_failed.md', 'w', encoding='utf-8') as f:
+                f.write(manager.failed_content)
+            print("💾 已保存失败内容到 last_failed.md")
+        sys.exit(1)
+
 
 if __name__ == '__main__':
     main()
