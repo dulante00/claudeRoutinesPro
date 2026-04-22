@@ -1,13 +1,13 @@
 ---
 name: daily-tech-briefing
-description: 每日 LLM 与科技新闻简报,抓取、筛选、整理成中文摘要并通过 Server 酱推送到微信
+description: 每日 LLM 与科技新闻简报,抓取、筛选、整理成中文摘要并通过 Slack Connector 推送到 Slack
 ---
 
 # 每日 LLM 与科技新闻简报
 
 ## 任务目标
 
-每天早上生成一份简洁的中文科技新闻简报,通过 Server 酱推送到微信。
+每天早上生成一份简洁的中文科技新闻简报,通过 Slack Connector 推送到 Slack 频道。
 内容聚焦 LLM、AI、前沿科技,过滤营销和水文。
 
 ---
@@ -53,11 +53,11 @@ description: 每日 LLM 与科技新闻简报,抓取、筛选、整理成中文�
 
 ## 输出格式
 
-用 Markdown 格式生成,总长度控制在 **800 字以内**(微信一屏可看完)。
+用 Markdown 格式生成,符合 Slack Block Kit 格式,总长度控制在 **2000 字以内**(Slack 不限制屏幕)。
 
 结构如下:
 
-```
+```markdown
 # 📰 今日科技简报 (YYYY-MM-DD)
 
 ## 🔥 必读 (最多 3 条)
@@ -97,6 +97,7 @@ _本简报由 Claude Code Routine 自动生成,如需调整偏好请修改 skill
 - 摘要要有信息量,别写"某某公司发布新模型,详情见原文"这种废话
 - 数字、模型名、产品名用英文原文保留(如 GPT-5、Claude 4.7)
 - 如果 24 小时内真的没有值得推的内容,直接推 "今日无重点新闻,保持关注" 即可,不要硬凑
+- Slack 消息使用 Block Kit 富文本格式,支持链接、加粗、代码块等
 
 ---
 
@@ -129,42 +130,81 @@ _本简报由 Claude Code Routine 自动生成,如需调整偏好请修改 skill
 
 ## 推送步骤
 
-生成好 Markdown 内容后,通过 Server 酱推送。
+生成好 Markdown 内容后,通过 Slack Connector 推送。
 
-**API 格式:**
-```
-POST https://sctapi.ftqq.com/<SENDKEY>.send
-Content-Type: application/x-www-form-urlencoded
+### 推送方式：Slack Connector（Claude Code 原生集成）
 
-title=今日科技简报
-desp=<Markdown 内容,需 URL encode>
-```
+Slack Connector 是 Claude Code 提供的原生连接器，用于直接推送消息到 Slack。
 
-**SENDKEY 从 repo 的环境变量 `SERVERCHAN_SENDKEY` 读取**(在 Routine 的 secrets 配置里设置,不要硬编码)。
+**配置要求:**
+1. 在 Slack Workspace 中创建 Incoming Webhook
+2. 获取 Webhook URL: `https://hooks.slack.com/services/T.../B.../XXX`
+3. 在 Claude Code 中配置环境变量:
+   ```bash
+   export SLACK_WEBHOOK_URL="https://hooks.slack.com/services/..."
+   ```
 
-**bash 推送命令:**
-```bash
-curl -X POST "https://sctapi.ftqq.com/${SERVERCHAN_SENDKEY}.send" \
-  --data-urlencode "title=📰 今日科技简报 $(date +%m-%d)" \
-  --data-urlencode "desp=${BRIEFING_CONTENT}"
+**推送代码逻辑:**
+```python
+import urllib.request
+import json
+
+def push_to_slack(webhook_url: str, content: str) -> bool:
+    """通过 Slack Webhook 推送"""
+    
+    slack_message = {
+        "text": "📰 今日科技简报",
+        "blocks": [
+            {
+                "type": "header",
+                "text": {
+                    "type": "plain_text",
+                    "text": "📰 今日科技简报",
+                    "emoji": True
+                }
+            },
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": content  # Markdown 内容
+                }
+            }
+        ]
+    }
+    
+    # 通过 Slack Connector 推送
+    data = json.dumps(slack_message).encode('utf-8')
+    req = urllib.request.Request(
+        webhook_url,
+        data=data,
+        headers={'Content-Type': 'application/json'},
+        method='POST'
+    )
+    
+    response = urllib.request.urlopen(req)
+    return response.read().decode('utf-8') == 'ok'
 ```
 
 **推送后检查返回:**
-- `{"code":0}` 成功
-- 其他 code 说明失败,记录日志,必要时重试 1 次
+- 返回 `ok` 表示成功
+- 其他返回值或异常表示失败,记录日志,必要时重试 1 次
 
-**额度提醒:**
-Server 酱免费版每天 5 条上限,本任务每天 1 次推送,剩余 4 条作为故障重试或调试用。
-相同内容 5 分钟内不能重复发送,不同内容一分钟只能发送 30 条(本任务不会触发)。
+**Slack 优势:**
+- ✅ 无推送频率限制（不像 Server 酱每天 5 条）
+- ✅ 支持富文本格式（Block Kit）
+- ✅ 支持线程回复、表情反应
+- ✅ 消息永久存档，支持搜索
+- ✅ 无需额外的第三方服务（Slack 官方 API）
 
 ---
 
 ## 异常处理
 
-- **所有信息源都访问失败:** 推送一条"今日新闻抓取失败,请检查网络或源站可用性"到微信,并退出
-- **Server 酱推送失败:** 把内容保存到 repo 的 `last_failed.md`,方便下次运行时重试或人工查看
-- **内容为空:** 推送"今日无重点新闻"
-- **超过 Server 酱当日推送配额:** 记录日志,不重试(免费版每天 5 条上限)
+- **所有信息源都访问失败:** 推送一条"今日新闻抓取失败,请检查网络或源站可用性"到 Slack,并退出
+- **Slack 推送失败:** 把内容保存到 repo 的 `last_failed.md`,方便下次运行时重试或人工查看
+- **内容为空:** 推送"今日无重点新闻,保持关注"
+- **SLACK_WEBHOOK_URL 未设置:** 输出错误日志,提示配置缺失
 
 ---
 
@@ -175,6 +215,27 @@ Server 酱免费版每天 5 条上限,本任务每天 1 次推送,剩余 4 条�
 3. 应用筛选规则 + 去重
 4. 按"必读 / 值得看 / 简讯"三档组织内容
 5. 生成中文 Markdown
-6. 通过 Server 酱推送
+6. 通过 Slack Connector 推送到 Slack（使用 SLACK_WEBHOOK_URL）
 7. 更新 `briefing_history.json`
 8. 输出本次推送摘要到 Routine 日志
+
+---
+
+## 执行环境
+
+**运行位置:** Claude Code Routines 沙箱
+
+**调用方式:**
+```bash
+# 直接运行
+python3 daily_briefing.py
+
+# 设置环境变量后运行
+export SLACK_WEBHOOK_URL="https://hooks.slack.com/services/..."
+python3 daily_briefing.py
+```
+
+**定期执行:**
+- Hook: 通过 `.claude/settings.json` 配置定时执行
+- /loop: 通过 `/loop 24h python3 daily_briefing.py` 定期运行
+- Crontab: 通过系统 crontab 定时执行
