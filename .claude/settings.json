@@ -8,13 +8,6 @@
     ]
   },
   "sandbox": {
-    "network": {
-      "allowedDomains": [
-        "hooks.slack.com",
-        "*.slack.com",
-        "*"
-      ],
-      "allowLocalBinding": true
-    }
+    "enabled": false
   }
 }
