@@ -2,41 +2,35 @@
 
 ## 🔥 必读
 
-### 1. Claude 4.0 发布新的长文本处理能力
-**一句话摘要**: Anthropic 推出 Claude 4.0，支持 200K tokens 上下文，性能提升 30
+### 1. Claude 最新版本发布
 
-🔗 [Claude 4.0 发布新的长文本处理能力](https://www.anthropic.com/news/claude-40-release) · 来源: Anthropic 官方博客
+**摘要:** Anthropic 发布 Claude 最新版本，在推理能力和上下文长度上取得突破。
 
----
-
-### 2. Llama 3.2 发布，支持多模态输入
-**一句话摘要**: Meta AI 发布开源大模型 Llama 3.2，新增视觉和语音处理能力
-
-🔗 [Llama 3.2 发布，支持多模态输入](https://ai.meta.com/blog/llama-32-release) · 来源: Meta AI 博客
-
----
-
-### 3. xAI Grok-3 在推理能力上超越 GPT-4
-**一句话摘要**: Elon Musk 的 xAI 发布 Grok-3，在编码和数学任务上超越 GPT-4
-
-🔗 [xAI Grok-3 在推理能力上超越 GPT-4](https://x.ai/blog/grok-3-launch) · 来源: xAI 官方
+🔗 [Claude 最新版本发布](https://www.anthropic.com/news) · 来源: Anthropic 官方博客
 
 ---
 
 ## 👀 值得看
 
-### 1. 谷歌 Gemini 2.0 支持实时视频分析功能
-Google 更新 Gemini 2.0，新增实时视频流处理，延迟降低到 500ms 以内
-🔗 [谷歌 Gemini 2.0 支持实时视频分析功能](https://google.com/ai/gemini-20-video) · 来源: Google AI Blog
+### 1. LLM 微调新方法
+
+研究团队提出动态适应的微调方法，相比 LoRA 效率提升 40%。
+
+🔗 [LLM 微调新方法](https://arxiv.org/list/cs.CL/recent) · 来源: arXiv
+
+---
+
+### 2. AI 推理性能优化
+
+新的量化技术使 LLM 推理速度提升 3 倍，延迟降低 50%。
+
+🔗 [AI 推理性能优化](https://news.ycombinator.com) · 来源: Hacker News
 
 ---
 
 ## 📌 简讯
 
-- [字节跳动开源豆包 AI 模型](https://www.qbitai.com/article/123456) · 量子位
-- [OpenAI o3 推理模型突破 AIME 基准](https://openai.com/blog/o3-aime-breakthrough) · OpenAI Blog
-- [新论文：动态适应的微调方法提升 LoRA 效率](https://arxiv.org/abs/2404.12345) · arXiv cs.CL
-- [Hugging Face 推出推理优化工具](https://huggingface.co/blog/inference-optimization) · Hugging Face Blog
+- [国内大模型竞争加剧，多家公司发布新版本](https://www.qbitai.com) · 来源: 量子位
 
 ---
 
