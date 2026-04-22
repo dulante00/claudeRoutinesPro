@@ -226,27 +226,7 @@ def push_to_slack(webhook_url: str, content: str) -> bool:
 3. 应用筛选规则 + 去重
 4. 按"必读 / 值得看 / 简讯"三档组织内容
 5. 生成中文 Markdown
-6. 通过 Slack Connector 推送到 Slack（使用 SLACK_WEBHOOK_URL）
+6. 通过 Bash curl 命令推送到 Slack（使用环境变量 SLACK_WEBHOOK_URL）
 7. 更新 `briefing_history.json`
 8. 输出本次推送摘要到 Routine 日志
 
----
-
-## 执行环境
-
-**运行位置:** Claude Code Routines 沙箱
-
-**调用方式:**
-```bash
-# 直接运行
-python3 daily_briefing.py
-
-# 设置环境变量后运行
-export SLACK_WEBHOOK_URL="https://hooks.slack.com/services/..."
-python3 daily_briefing.py
-```
-
-**定期执行:**
-- Hook: 通过 `.claude/settings.json` 配置定时执行
-- /loop: 通过 `/loop 24h python3 daily_briefing.py` 定期运行
-- Crontab: 通过系统 crontab 定时执行
