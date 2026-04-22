@@ -284,6 +284,36 @@ def create_sample_briefing():
     ]
     return sample_items
 
+def save_push_command(content: str, sendkey: str) -> None:
+    """保存可手动执行的推送命令"""
+    import shlex
+
+    title = f"📰 今日科技简报 {datetime.now().strftime('%Y-%m-%d')}"
+
+    # 保存为 bash 脚本
+    cmd = f"""#!/bin/bash
+# 手动推送简报到微信
+# 在有网络权限的环境中运行此脚本
+
+SENDKEY="{sendkey}"
+TITLE="{title}"
+
+curl -X POST "https://sctapi.ftqq.com/${{SENDKEY}}.send" \\
+  --data-urlencode "title=${{TITLE}}" \\
+  --data-urlencode "desp=$(cat << 'EOF'
+{content}
+EOF
+)"
+
+echo "推送完成！"
+"""
+
+    with open('manual_push.sh', 'w') as f:
+        f.write(cmd)
+
+    print(f"💾 已保存推送脚本到 manual_push.sh")
+    print(f"   在有网络权限的环境中运行: bash manual_push.sh")
+
 def main():
     print("🚀 开始执行每日科技简报任务...\n")
 
@@ -319,10 +349,16 @@ def main():
     if manager.push_to_wechat(content):
         manager.save_history()
         manager.print_summary()
+        # 保存手动推送脚本
+        if manager.sendkey:
+            save_push_command(content, manager.sendkey)
     else:
         manager.save_failed_content()
-        print("❌ 推送失败")
-        sys.exit(1)
+        # 保存手动推送脚本
+        if manager.sendkey and content:
+            save_push_command(content, manager.sendkey)
+        print("❌ 自动推送失败")
+        print("💡 已生成 manual_push.sh，可在有网络权限的环境中手动执行")
 
 if __name__ == '__main__':
     main()
