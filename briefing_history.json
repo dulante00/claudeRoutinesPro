@@ -82,6 +82,26 @@
         {
           "title": "OpenAI 发布 GPT-4 Turbo 新版本，支持 JSON 模式改进",
           "url": "https://openai.com/blog/gpt-4-turbo-update"
+        },
+        {
+          "title": "Mozilla 借助 Claude Mythos 在 Firefox 150 修复 271 个安全漏洞",
+          "url": "https://www.engadget.com/ai/mozilla-says-it-patched-271-firefox-vulnerabilities-thanks-to-anthropics-claude-mythos-224330023.html"
+        },
+        {
+          "title": "OpenAI 发布 ChatGPT Images 2.0：首个具备推理能力的图像模型",
+          "url": "https://siliconangle.com/2026/04/21/openai-launches-chatgpt-images-2-0-codex-labs-developer-training-service/"
+        },
+        {
+          "title": "Anthropic 测试将 Claude Code 从 $20/月 Pro 套餐移除",
+          "url": "https://aitoolly.com/ai-news/article/2026-04-22-anthropic-reportedly-removes-claude-code-from-20-monthly-pro-subscription-tier"
+        },
+        {
+          "title": "GenericAgent 自进化智能体系统首篇技术报告发布，Token 效率提升约 6 倍",
+          "url": "https://finance.sina.com.cn/tech/roll/2026-04-22/doc-inhvitan6273687.shtml"
+        },
+        {
+          "title": "DeepSeek 与阿里千问模型成为俄罗斯企业日常办公标配",
+          "url": "https://sputniknews.cn/20260422/1070899245.html"
         }
       ]
     }
