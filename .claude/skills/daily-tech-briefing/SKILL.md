@@ -19,12 +19,14 @@ description: 每日 LLM 与科技新闻简报,抓取、筛选、整理成中文�
 - **量子位** https://www.qbitai.com/
 - **Anthropic 官方博客** https://www.anthropic.com/news (英文,翻译成中文)
 - **OpenAI Blog** https://openai.com/blog (英文,翻译成中文)
+- **Google AI Blog** https://blog.google/technology/ai/ (英文,翻译成中文；Gemini / Gemma 系列唯一官方发布渠道)
 
 ### 二级源(有余力就查)
 - **36氪 AI 频道** https://36kr.com/information/AI/
 - **InfoQ 中文** https://www.infoq.cn/topic/AI
 - **少数派** https://sspai.com/ (科技类)
 - **Hacker News** https://news.ycombinator.com/ (挑 AI/LLM 相关的,用中文总结)
+- **VentureBeat AI** https://venturebeat.com/category/ai (英文,翻译成中文；模型发布当日必有深度报道，英文 AI 媒体中覆盖最稳定)
 
 ### 三级源(深度补充)
 - **arXiv cs.CL** https://arxiv.org/list/cs.CL/recent (挑当天 Top 讨论论文)
