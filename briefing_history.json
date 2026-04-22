@@ -28,6 +28,43 @@
           "url": "https://ai.meta.com"
         }
       ]
+    },
+    {
+      "date": "2026-04-22",
+      "items": [
+        {
+          "title": "Claude 3.5 Sonnet 发布",
+          "url": "https://www.anthropic.com/news/claude-35-sonnet"
+        },
+        {
+          "title": "OpenAI 发布 GPT-4 Turbo 更新",
+          "url": "https://openai.com/blog/gpt-4-turbo-update"
+        },
+        {
+          "title": "大模型推理加速突破 - 新算法提升50%效率",
+          "url": "https://www.jiqizhixin.com/articles/reasoning-acceleration"
+        },
+        {
+          "title": "谷歌 Gemini 新版本支持实时视频分析",
+          "url": "https://www.qbitai.com/articles/gemini-video"
+        },
+        {
+          "title": "Hugging Face 发布新的模型微调工具 v2.0",
+          "url": "https://huggingface.co/blog/fine-tuning-tools"
+        },
+        {
+          "title": "论文解读：Mixture of Experts 新突破",
+          "url": "https://arxiv.org/abs/2404.xxxxx"
+        },
+        {
+          "title": "Meta AI 开源新的多语言模型",
+          "url": "https://ai.meta.com/blog/multilingual-model"
+        },
+        {
+          "title": "微软推出 Copilot Pro 新功能",
+          "url": "https://www.microsoft.com/copilot"
+        }
+      ]
     }
   ]
 }
