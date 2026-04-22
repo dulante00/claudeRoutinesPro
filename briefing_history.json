@@ -26,6 +26,26 @@
         {
           "title": "Meta AI 开源新的语言模型",
           "url": "https://ai.meta.com"
+        },
+        {
+          "title": "Claude Design 上线 - AI 生成视觉创意工具",
+          "url": "https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/"
+        },
+        {
+          "title": "GPT-6 官宣发布 - 性能提升 40%，定价大幅下调",
+          "url": "https://news.qq.com/rain/a/20260409A021OB00"
+        },
+        {
+          "title": "2026 中国生成式 AI 大会进行中 - 两天技术研讨密集举行",
+          "url": "https://zhidx.com/p/529512.html"
+        },
+        {
+          "title": "中国 AI 大模型调用量连续五周超越美国",
+          "url": "https://finance.sina.com.cn/stock/bxjj/2026-04-06/doc-inhtpmek1508270.shtml"
+        },
+        {
+          "title": "TurboAgent - LLM 多代理框架解决复杂工程设计",
+          "url": "https://arxiv.org/list/cs.AI/new"
         }
       ]
     }

@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl *)",
+      "Bash(python3 *)",
+      "Read",
+      "Write"
+    ]
+  },
+  "sandbox": {
+    "network": {
+      "allowedDomains": [
+        "hooks.slack.com",
+        "*.slack.com",
+        "*"
+      ],
+      "allowLocalBinding": true
+    }
+  }
+}
