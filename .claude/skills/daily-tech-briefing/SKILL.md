@@ -28,6 +28,7 @@ description: 每日 LLM 与科技新闻简报,抓取、筛选、整理成中文�
 
 ### 三级源(深度补充)
 - **arXiv cs.CL** https://arxiv.org/list/cs.CL/recent (挑当天 Top 讨论论文)
+- **Dwarkesh Podcast** https://www.dwarkesh.com/ (英文,翻译成中文；专做 AI/科技顶级人物长篇访谈，受访者包括黄仁勋、Sam Altman、Dario Amodei 等；每次发布几乎都是行业级事件，优先级高于普通三级源)
 
 ---
 
