@@ -38,7 +38,7 @@ jobs:
       # 4. 运行简报生成脚本
       - name: 🚀 生成并推送简报
         env:
-          SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
           python3 daily_briefing.py
 

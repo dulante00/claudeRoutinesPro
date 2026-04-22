@@ -136,45 +136,75 @@ class BriefingManager:
 
         return ''.join(lines)
 
-    def push_to_wechat(self, content: str) -> bool:
-        """推送到微信"""
-        if not self.sendkey:
-            print("❌ 错误: SERVERCHAN_SENDKEY 未设置")
+    def push_to_slack(self, content: str) -> bool:
+        """推送到 Slack"""
+        webhook_url = os.environ.get('SLACK_WEBHOOK_URL')
+        if not webhook_url:
+            print("❌ 错误: SLACK_WEBHOOK_URL 未设置")
             return False
 
         title = f"📰 今日科技简报 {self.today}"
-        url = f"https://sctapi.ftqq.com/{self.sendkey}.send"
 
-        data = urllib.parse.urlencode({
-            'title': title,
-            'desp': content
-        }).encode('utf-8')
+        # Slack 消息格式
+        slack_message = {
+            "text": title,
+            "blocks": [
+                {
+                    "type": "header",
+                    "text": {
+                        "type": "plain_text",
+                        "text": title,
+                        "emoji": True
+                    }
+                },
+                {
+                    "type": "section",
+                    "text": {
+                        "type": "mrkdwn",
+                        "text": content
+                    }
+                },
+                {
+                    "type": "context",
+                    "elements": [
+                        {
+                            "type": "mrkdwn",
+                            "text": f"_生成于 {self.today} · Claude Code Routine_"
+                        }
+                    ]
+                }
+            ]
+        }
 
         try:
-            req = urllib.request.Request(url, data=data)
-            with urllib.request.urlopen(req, timeout=15) as response:
-                result = json.loads(response.read().decode('utf-8'))
-                if result.get('code') == 0:
-                    print(f"✅ 成功推送到微信")
+            data = json.dumps(slack_message).encode('utf-8')
+            req = urllib.request.Request(
+                webhook_url,
+                data=data,
+                headers={'Content-Type': 'application/json'},
+                method='POST'
+            )
+
+            print("📤 发送到 Slack...")
+            with urllib.request.urlopen(req, timeout=30) as response:
+                result = response.read().decode('utf-8')
+                if result == 'ok':
+                    print(f"✅ 成功推送到 Slack")
                     return True
                 else:
-                    error = result.get('message', '未知错误')
-                    print(f"❌ 推送失败: {error}")
+                    print(f"❌ Slack 返回: {result}")
                     self.failed_content = content
                     return False
+
         except Exception as e:
-            # 网络环境限制下，记录推送日志并继续
-            if "403" in str(e) or "Host not in allowlist" in str(e):
-                print(f"⚠️  网络环境受限，但内容已准备就绪")
-                print(f"📤 推送内容:")
-                print(f"   标题: {title}")
-                print(f"   大小: {len(content)} 字符")
-                # 在实际环境中，这会推送成功
-                return True
-            else:
-                print(f"❌ 推送异常: {str(e)}")
-                self.failed_content = content
-                return False
+            print(f"❌ 推送异常: {str(e)}")
+            self.failed_content = content
+            return False
+
+    def push_to_wechat(self, content: str) -> bool:
+        """推送到微信（已废弃，请使用 push_to_slack）"""
+        print("⚠️  微信推送已改为 Slack，请更新配置")
+        return self.push_to_slack(content)
 
     def save_history(self) -> None:
         """保存历史记录"""
@@ -345,8 +375,8 @@ def main():
         content = manager.generate_markdown()
 
     # 推送
-    print("📤 推送到微信...")
-    if manager.push_to_wechat(content):
+    print("📤 推送到 Slack...")
+    if manager.push_to_slack(content):
         manager.save_history()
         manager.print_summary()
         # 保存手动推送脚本
