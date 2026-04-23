@@ -1,6 +1,43 @@
 {
   "history": [
     {
+      "date": "2026-04-23",
+      "items": [
+        {
+          "title": "Claude Opus 4.7 发布 - Anthropic 旗舰推理模型升级",
+          "url": "https://www.anthropic.com/news"
+        },
+        {
+          "title": "GPT-5.4 及 Cyber 专用模型上线",
+          "url": "https://openai.com/blog"
+        },
+        {
+          "title": "Google Gemini 3.1 Ultra 发布，2M 原生多模态",
+          "url": "https://blog.google/technology/ai"
+        },
+        {
+          "title": "Claude Mythos 曝光 - Anthropic 最强秘密模型",
+          "url": "https://www.anthropic.com"
+        },
+        {
+          "title": "Meta 收购 xAI 股权，AI 布局升级",
+          "url": "https://techcrunch.com"
+        },
+        {
+          "title": "阿里千问 Qwen3.6-plus 突破代码生成能力",
+          "url": "https://www.alibabacloud.com"
+        },
+        {
+          "title": "Grok 4.20 增强实时网络访问",
+          "url": "https://news.ycombinator.com"
+        },
+        {
+          "title": "豆包 Doubao-Seed-2.0 视觉推理提升",
+          "url": "https://github.com"
+        }
+      ]
+    },
+    {
       "date": "2026-04-22",
       "items": [
         {
