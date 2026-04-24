@@ -1,6 +1,43 @@
 {
   "history": [
     {
+      "date": "2026-04-24",
+      "items": [
+        {
+          "title": "OpenAI 发布 GPT-5.5 — 6 周内第二次更新旗舰模型",
+          "url": "https://openai.com/index/introducing-gpt-5-5/"
+        },
+        {
+          "title": "Google Cloud Next 2026：Vertex AI 更名 + TPU v8 + Gemini 3.2 预览",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/next-2026/"
+        },
+        {
+          "title": "Anthropic 二级市场估值破万亿，首次超越 OpenAI",
+          "url": "https://news.quantosei.com/2026/04/23/anthropic-has-surged-to-a-trillion-dollar-valuation-on-secondary-markets-overtaking-openai/"
+        },
+        {
+          "title": "Anthropic 法院声明：Claude 部署至五角大楼后无法被强制关闭",
+          "url": "https://www.axios.com/2026/04/23/anthropic-openai-showdown"
+        },
+        {
+          "title": "Anthropic IPO 前危机：推理成本超预期 23%，毛利率跌至约 40%",
+          "url": "https://www.axios.com/2026/04/23/anthropic-openai-showdown"
+        },
+        {
+          "title": "DeepSeek V4 预计本周发布，1T 参数 MoE，1M 上下文，原生多模态",
+          "url": "https://chinabizinsider.com/deepseek-v4-targets-late-april-launch-betting-on-trillion-parameter-efficiency/"
+        },
+        {
+          "title": "月之暗面 Kimi K2.6：1T MoE，支持 300 子 Agent 协作，全球开源排名第一",
+          "url": "https://siliconangle.com/2026/04/20/moonshot-ai-releases-kimi-k2-6-model-1t-parameters-attention-optimizations/"
+        },
+        {
+          "title": "Google Cloud Next 2026：A2A 协议扩展，实现跨平台异构 Agent 互操作",
+          "url": "https://thenextweb.com/news/google-cloud-next-ai-agents-agentic-era"
+        }
+      ]
+    },
+    {
       "date": "2026-04-23",
       "items": [
         {
