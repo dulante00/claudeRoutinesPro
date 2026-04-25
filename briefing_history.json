@@ -1,6 +1,19 @@
 {
   "history": [
     {
+      "date": "2026-04-25",
+      "items": [
+        {
+          "title": "DeepSeek V4 Preview 正式开源发布：V4-Pro（1.6T 总参/49B 活跃）SWE-bench 80.6%，API 价格为 Claude 的 1/7",
+          "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html"
+        },
+        {
+          "title": "DeepSeek V4 与华为昇腾原生集成，加速中国企业 AI 本地化部署",
+          "url": "https://fortune.com/2026/04/24/deepseek-v4-ai-model-price-performance-china-open-source/"
+        }
+      ]
+    },
+    {
       "date": "2026-04-24",
       "items": [
         {
