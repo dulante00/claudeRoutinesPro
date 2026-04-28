@@ -1,6 +1,23 @@
 {
   "history": [
     {
+      "date": "2026-04-28",
+      "items": [
+        {
+          "title": "OpenAI 与 Microsoft 终止排他协议：AI 进入多云竞争时代",
+          "url": "https://techcrunch.com/2026/04/27/openai-ends-microsoft-legal-peril-over-its-50b-amazon-deal/"
+        },
+        {
+          "title": "曝光：OpenAI 秘密研发 AI 手机，Qualcomm + MediaTek + 立讯精密联合打造",
+          "url": "https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/"
+        },
+        {
+          "title": "DeepSeek V4 / Qwen3.6 / Kimi K2.6 密集发布引发价格战：Bloomberg 深度分析中国 AI 组合对美国对手的系统性竞争压力",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-27/why-china-s-deepseek-qwen-and-moonshot-are-a-worry-for-us-ai-rivals"
+        }
+      ]
+    },
+    {
       "date": "2026-04-27",
       "items": [
         {
