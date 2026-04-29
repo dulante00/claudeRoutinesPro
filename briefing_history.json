@@ -1,6 +1,39 @@
 {
   "history": [
     {
+      "date": "2026-04-29",
+      "items": [
+        {
+          "title": "Google与五角大楼签署\"任何合法用途\"机密AI协议",
+          "url": "https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/"
+        },
+        {
+          "title": "CVE-2026-25874：Hugging Face LeRoBot暴露CVSS 9.8未修复RCE漏洞",
+          "url": "https://thehackernews.com/2026/04/critical-cve-2026-25874-leaves-hugging.html"
+        },
+        {
+          "title": "前DeepMind David Silver完成$1.1B欧洲史上最大种子轮",
+          "url": "https://www.cnbc.com/2026/04/28/meta-google-big-tech-staff-ai-labs-investors.html"
+        },
+        {
+          "title": "Meta Q1 2026财报今日发布：$1350亿AI超级投资首次接受盈利检验",
+          "url": "https://247wallst.com/investing/2026/04/28/meta-reports-q1-earnings-tomorrow-3-things-to-watch-on-ai-spend/"
+        },
+        {
+          "title": "560名Google员工致信CEO反对Pentagon AI协议，要求保留内容审核权",
+          "url": "https://thehill.com/policy/technology/5851425-google-employees-oppose-pentagon-ai-deal/"
+        },
+        {
+          "title": "五角大楼AI主任确认Google协议补位，Anthropic供应链风险标签仍待法院裁决",
+          "url": "https://www.cnbc.com/2026/04/28/pentagon-ai-chief-confirms-work-with-google-after-anthropic-blacklist.html"
+        },
+        {
+          "title": "Ineffable Intelligence详情：无产品无营收无路线图，Sequoia+Nvidia+Google共押注$1.1B",
+          "url": "https://siliconangle.com/2026/04/27/ineffable-intelligence-raises-1-1b-5-1b-valuation-build-ai-superlearner/"
+        }
+      ]
+    },
+    {
       "date": "2026-04-28",
       "items": [
         {
@@ -147,55 +180,6 @@
         {
           "title": "豆包 Doubao-Seed-2.0 视觉推理提升",
           "url": "https://github.com"
-        }
-      ]
-    },
-    {
-      "date": "2026-04-22",
-      "items": [
-        {
-          "title": "Claude 4.0 发布新的长文本处理能力",
-          "url": "https://www.anthropic.com/news/claude-40-release"
-        },
-        {
-          "title": "Llama 3.2 发布，支持多模态输入",
-          "url": "https://ai.meta.com/blog/llama-32-release"
-        },
-        {
-          "title": "xAI Grok-3 在推理能力上超越 GPT-4",
-          "url": "https://x.ai/blog/grok-3-launch"
-        },
-        {
-          "title": "谷歌 Gemini 2.0 支持实时视频分析功能",
-          "url": "https://google.com/ai/gemini-20-video"
-        },
-        {
-          "title": "字节跳动开源豆包 AI 模型",
-          "url": "https://www.qbitai.com/article/123456"
-        },
-        {
-          "title": "OpenAI o3 推理模型突破 AIME 基准",
-          "url": "https://openai.com/blog/o3-aime-breakthrough"
-        },
-        {
-          "title": "Mozilla 借助 Claude Mythos 在 Firefox 150 修复 271 个安全漏洞",
-          "url": "https://www.engadget.com/ai/mozilla-says-it-patched-271-firefox-vulnerabilities-thanks-to-anthropics-claude-mythos-224330023.html"
-        },
-        {
-          "title": "OpenAI 发布 ChatGPT Images 2.0：首个具备推理能力的图像模型",
-          "url": "https://siliconangle.com/2026/04/21/openai-launches-chatgpt-images-2-0-codex-labs-developer-training-service/"
-        },
-        {
-          "title": "Anthropic 测试将 Claude Code 从 $20/月 Pro 套餐移除",
-          "url": "https://aitoolly.com/ai-news/article/2026-04-22-anthropic-reportedly-removes-claude-code-from-20-monthly-pro-subscription-tier"
-        },
-        {
-          "title": "GenericAgent 自进化智能体系统首篇技术报告发布，Token 效率提升约 6 倍",
-          "url": "https://finance.sina.com.cn/tech/roll/2026-04-22/doc-inhvitan6273687.shtml"
-        },
-        {
-          "title": "DeepSeek 与阿里千问模型成为俄罗斯企业日常办公标配",
-          "url": "https://sputniknews.cn/20260422/1070899245.html"
         }
       ]
     }
