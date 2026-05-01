@@ -1,6 +1,23 @@
 {
   "history": [
     {
+      "date": "2026-05-01",
+      "items": [
+        {
+          "title": "科技巨头 Q1 2026 财报：合计 AI 资本支出超 $6500 亿，盈利分化",
+          "url": "https://thenextweb.com/news/alphabet-amazon-meta-q1-2026-earnings-ai-cloud"
+        },
+        {
+          "title": "白宫起草方案允许联邦机构接入 Anthropic Mythos，同时封堵商业开放计划",
+          "url": "https://www.axios.com/2026/04/29/trump-anthropic-pentagon-ai-executive-order-gov"
+        },
+        {
+          "title": "SoftBank 成立 Roze AI：机器人自动化建设数据中心，H2 2026 赴美 IPO，目标估值 $1000 亿",
+          "url": "https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/"
+        }
+      ]
+    },
+    {
       "date": "2026-04-29",
       "items": [
         {
@@ -143,43 +160,6 @@
         {
           "title": "Google Cloud Next 2026：A2A 协议扩展，实现跨平台异构 Agent 互操作",
           "url": "https://thenextweb.com/news/google-cloud-next-ai-agents-agentic-era"
-        }
-      ]
-    },
-    {
-      "date": "2026-04-23",
-      "items": [
-        {
-          "title": "Claude Opus 4.7 发布 - Anthropic 旗舰推理模型升级",
-          "url": "https://www.anthropic.com/news"
-        },
-        {
-          "title": "GPT-5.4 及 Cyber 专用模型上线",
-          "url": "https://openai.com/blog"
-        },
-        {
-          "title": "Google Gemini 3.1 Ultra 发布，2M 原生多模态",
-          "url": "https://blog.google/technology/ai"
-        },
-        {
-          "title": "Claude Mythos 曝光 - Anthropic 最强秘密模型",
-          "url": "https://www.anthropic.com"
-        },
-        {
-          "title": "Meta 收购 xAI 股权，AI 布局升级",
-          "url": "https://techcrunch.com"
-        },
-        {
-          "title": "阿里千问 Qwen3.6-plus 突破代码生成能力",
-          "url": "https://www.alibabacloud.com"
-        },
-        {
-          "title": "Grok 4.20 增强实时网络访问",
-          "url": "https://news.ycombinator.com"
-        },
-        {
-          "title": "豆包 Doubao-Seed-2.0 视觉推理提升",
-          "url": "https://github.com"
         }
       ]
     }
