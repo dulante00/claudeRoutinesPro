@@ -1,6 +1,31 @@
 {
   "history": [
     {
+      "date": "2026-05-03",
+      "items": [
+        {
+          "title": "Musk v. Altman 庭审第一周收官：xAI承认"部分"蒸馏OpenAI模型训练Grok",
+          "url": "https://www.cnbc.com/2026/05/02/musk-testimony-dominated-first-week-musk-v-altman-trial-in-oakland.html"
+        },
+        {
+          "title": "OpenAI CFO：需求是"垂直的墙"，IPO悄然推迟至2027年",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-01/openai-finance-chief-sees-vertical-wall-of-demand-for-products"
+        },
+        {
+          "title": "四大超算巨头2026年AI资本支出逼近$7000亿，电力冷却成瓶颈",
+          "url": "https://fortune.com/2026/04/30/big-tech-hyperscalers-will-spend-700-billion-on-ai-infrastructure-this-year-with-no-clear-end-in-sight-eye-on-ai/"
+        },
+        {
+          "title": "Nature：最先进AI Agent在复杂科学任务上仍被人类科学家完胜",
+          "url": "https://www.nature.com/articles/d41586-026-01199-z"
+        },
+        {
+          "title": "Meta Business AI破千万对话/周，年初以来增长10×",
+          "url": "https://techcrunch.com/2026/04/30/meta-says-its-business-ai-now-facilitates-10-million-conversations-a-week/"
+        }
+      ]
+    },
+    {
       "date": "2026-05-02",
       "items": [
         {
@@ -133,19 +158,6 @@
           "url": "https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html"
         }
       ]
-    },
-    {
-      "date": "2026-04-25",
-      "items": [
-        {
-          "title": "DeepSeek V4 Preview 正式开源发布：V4-Pro（1.6T 总参/49B 活跃）SWE-bench 80.6%，API 价格为 Claude 的 1/7",
-          "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html"
-        },
-        {
-          "title": "DeepSeek V4 与华为昇腾原生集成，加速中国企业 AI 本地化部署",
-          "url": "https://fortune.com/2026/04/24/deepseek-v4-ai-model-price-performance-china-open-source/"
-        }
-      ]
-    },
+    }
   ]
 }
