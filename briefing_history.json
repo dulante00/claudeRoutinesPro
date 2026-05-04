@@ -1,6 +1,31 @@
 {
   "history": [
     {
+      "date": "2026-05-04",
+      "items": [
+        {
+          "title": "Mistral Medium 3.5：128B 全能旗舰，SWE-Bench Verified 77.6% 超越同级竞品",
+          "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5"
+        },
+        {
+          "title": "Sakana AI 推出 KAME：语音 AI"说话时同步思考"，MT-Bench 从 2.05 飙升至 6.43",
+          "url": "https://pub.sakana.ai/kame/"
+        },
+        {
+          "title": "Goldman Sachs：AI Agent 引爆的 $2850 亿 SaaS 蒸发属"过度恐慌"",
+          "url": "https://www.fool.com/investing/2026/05/03/goldman-sachs-says-the-artificial-intelligence-ai/"
+        },
+        {
+          "title": "OpenAI 为 ChatGPT 引入 Advanced Account Security：FIDO2 passkeys + Yubico 联名硬件密钥",
+          "url": "https://openai.com/index/advanced-account-security/"
+        },
+        {
+          "title": "韩国 KFTC 在亚开行年会宣布推出 AI Agent 支付平台",
+          "url": "https://en.sedaily.com/business/2026/05/03/kftc-to-launch-ai-agent-payment-platform-for-financial"
+        }
+      ]
+    },
+    {
       "date": "2026-05-03",
       "items": [
         {
@@ -127,35 +152,6 @@
         {
           "title": "国家超算互联网上线 DeepSeek-V4 百万 Token 限时免费对话服务",
           "url": "https://www.ithome.com/0/943/599.htm"
-        }
-      ]
-    },
-    {
-      "date": "2026-04-26",
-      "items": [
-        {
-          "title": "Google + Amazon 单周合计向 Anthropic 承诺 650 亿美元",
-          "url": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/"
-        },
-        {
-          "title": "Cognition AI（Devin 开发商）谈判以 $250亿估值融资，较前轮翻倍",
-          "url": "https://www.bloomberg.com/news/articles/2026-04-23/ai-coding-firm-cognition-in-funding-talks-at-25-billion-value"
-        },
-        {
-          "title": "2026 年 4 月 AI 融资超级周期：1,314 笔交易中 72% 涉及 AI",
-          "url": "https://inforcapital.com/blog/2026-04-25-the-ai-funding-supercycle-1314-deals-in-april-show-where-real-capital-is-going/"
-        },
-        {
-          "title": "Jeff Bezos 接近完成独立 AI 实验室 $100亿融资",
-          "url": "https://www.bloomberg.com/news/articles/2026-04-21/jeff-bezos-nears-10-billion-funding-round-for-ai-lab-ft-says"
-        },
-        {
-          "title": "Cursor AI 谈判以 $500亿+估值融资 $20亿",
-          "url": "https://www.cnbc.com/2026/04/19/cursor-ai-2-billion-funding-round.html"
-        },
-        {
-          "title": "Amazon-Anthropic 10年 $1000亿 AWS 采购协议：年底前上线 1GW Trainium2/3 算力",
-          "url": "https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html"
         }
       ]
     }
