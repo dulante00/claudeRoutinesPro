@@ -1,6 +1,39 @@
 {
   "history": [
     {
+      "date": "2026-05-05",
+      "items": [
+        {
+          "title": "特朗普政府拟行政令：AI 模型发布前须经政府审查",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-04/white-house-eyes-vetting-ai-models-before-release-ny-times-says"
+        },
+        {
+          "title": "Cerebras 赴纳斯达克 IPO：拟募资 $35 亿，估值 $265 亿，Q4 营收 $5.1 亿（同比+76%）",
+          "url": "https://www.cnbc.com/2026/05/04/cerebras-ipo-ai-chipmaker.html"
+        },
+        {
+          "title": "GPT-5.5 今日举办 AI 自主策划的庆生派对，Sam Altman 邀请马斯克出席",
+          "url": "https://www.latestly.com/technology/sam-altman-reveals-gpt-5-5-planned-its-own-launch-party-for-may-5-7416228.html"
+        },
+        {
+          "title": "Musk v. Altman 庭审第二周：开庭前 Musk 曾秘密联络 Brockman 商议和解",
+          "url": "https://www.cnbc.com/2026/05/04/musk-altman-open-ai-settlement-trial-brockman.html"
+        },
+        {
+          "title": "Google 员工抗议五角大楼 AI 合同，影响力已不及 Project Maven 时代",
+          "url": "https://fortune.com/2026/05/04/google-employee-backlash-pentagon-ai-contract-power-waned-since-project-maven/"
+        },
+        {
+          "title": "IBM 全球 CEO 研究：83% 认为 AI 成败核心在于员工适应，而非技术",
+          "url": "https://newsroom.ibm.com/2026-05-04-ibm-study-ceos-are-reshaping-c-suite-roles-for-the-ai-era"
+        },
+        {
+          "title": "五角大楼与 OpenAI、Google、Microsoft、Nvidia 等8家公司签署 AI 军事协议，Anthropic 再度出局",
+          "url": "https://www.ghacks.net/2026/05/04/pentagon-signs-ai-deals-with-openai-google-microsoft-nvidia-and-others-cutting-out-anthropic/"
+        }
+      ]
+    },
+    {
       "date": "2026-05-04",
       "items": [
         {
@@ -138,22 +171,5 @@
         }
       ]
     },
-    {
-      "date": "2026-04-27",
-      "items": [
-        {
-          "title": "DeepSeek V4-Pro API 官宣限时 2.5 折，百万 Token 输入降至 0.25 元",
-          "url": "https://finance.sina.com.cn/roll/2026-04-26/doc-inhvutnp3438466.shtml"
-        },
-        {
-          "title": "OpenClaw 将 DeepSeek V4-Flash 设为默认模型，V4-Pro（1.6T参数）进入模型库",
-          "url": "https://www.ithome.com/0/943/615.htm"
-        },
-        {
-          "title": "国家超算互联网上线 DeepSeek-V4 百万 Token 限时免费对话服务",
-          "url": "https://www.ithome.com/0/943/599.htm"
-        }
-      ]
-    }
   ]
 }
