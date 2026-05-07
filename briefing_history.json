@@ -1,6 +1,35 @@
 {
   "history": [
     {
+      "date": "2026-05-07",
+      "items": [
+        {
+          "title": "Anthropic 承诺向 Google Cloud 支出 $2000 亿，锁定 5 年 TPU 算力",
+          "url": "https://www.engadget.com/2165585/anthropic-reportedly-agrees-to-pay-google-200-billion-for-chips-and-cloud-access/"
+        },
+        {
+          "title": "Musk v. Altman 第二周庭审：前 CTO Murati 出庭作证，指 Altman 制造混乱、对高管说谎",
+          "url": "https://www.usnews.com/news/top-news/articles/2026-05-06/in-openai-trial-former-technology-chief-says-altman-sowed-chaos-distrust-among-top-executives"
+        },
+        {
+          "title": "Google 内部测试 \"Remy\"：24/7 主动型 AI 助理，将 Gemini 从回答升级为主动行动",
+          "url": "https://www.itpro.com/technology/artificial-intelligence/google-is-building-its-own-openclaw-alternative-remy-elevates-the-gemini-app-into-a-true-assistant"
+        },
+        {
+          "title": "Samsung 市值突破 $1 万亿，成亚洲第二家万亿美元公司",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-06/samsung-hits-1-trillion-valuation-joining-tsmc-in-elite-club"
+        },
+        {
+          "title": "QuantWare 完成 $1.78 亿融资，量产超导量子处理器，布局 AI 时代量子硬件开放架构",
+          "url": "https://techstartups.com/2026/05/06/top-tech-news-today-may-6-2026/"
+        },
+        {
+          "title": "AMD AI 芯片业务前景超预期，带动美国芯片股全线上涨",
+          "url": "https://techstartups.com/2026/05/06/top-tech-news-today-may-6-2026/"
+        }
+      ]
+    },
+    {
       "date": "2026-05-06",
       "items": [
         {
@@ -150,38 +179,5 @@
         }
       ]
     },
-    {
-      "date": "2026-04-29",
-      "items": [
-        {
-          "title": "Google与五角大楼签署\"任何合法用途\"机密AI协议",
-          "url": "https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/"
-        },
-        {
-          "title": "CVE-2026-25874：Hugging Face LeRoBot暴露CVSS 9.8未修复RCE漏洞",
-          "url": "https://thehackernews.com/2026/04/critical-cve-2026-25874-leaves-hugging.html"
-        },
-        {
-          "title": "前DeepMind David Silver完成$1.1B欧洲史上最大种子轮",
-          "url": "https://www.cnbc.com/2026/04/28/meta-google-big-tech-staff-ai-labs-investors.html"
-        },
-        {
-          "title": "Meta Q1 2026财报今日发布：$1350亿AI超级投资首次接受盈利检验",
-          "url": "https://247wallst.com/investing/2026/04/28/meta-reports-q1-earnings-tomorrow-3-things-to-watch-on-ai-spend/"
-        },
-        {
-          "title": "560名Google员工致信CEO反对Pentagon AI协议，要求保留内容审核权",
-          "url": "https://thehill.com/policy/technology/5851425-google-employees-oppose-pentagon-ai-deal/"
-        },
-        {
-          "title": "五角大楼AI主任确认Google协议补位，Anthropic供应链风险标签仍待法院裁决",
-          "url": "https://www.cnbc.com/2026/04/28/pentagon-ai-chief-confirms-work-with-google-after-anthropic-blacklist.html"
-        },
-        {
-          "title": "Ineffable Intelligence详情：无产品无营收无路线图，Sequoia+Nvidia+Google共押注$1.1B",
-          "url": "https://siliconangle.com/2026/04/27/ineffable-intelligence-raises-1-1b-5-1b-valuation-build-ai-superlearner/"
-        }
-      ]
-    }
   ]
 }
