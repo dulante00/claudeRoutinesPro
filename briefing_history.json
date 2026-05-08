@@ -1,6 +1,27 @@
 {
   "history": [
     {
+      "date": "2026-05-08",
+      "items": [
+        {
+          "title": "Google Gemini 3.1 Flash-Lite 正式 GA：Gemini 3 系列成本最低模型开放生产环境",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-1-flash-lite-is-now-generally-available"
+        },
+        {
+          "title": "Moonshot AI（Kimi）完成 $20 亿融资，估值达 $200 亿",
+          "url": "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/"
+        },
+        {
+          "title": "Musk v. Altman 庭审：Shivon Zilis 披露 Musk 曾提议让 Altman 加入 Tesla 董事会",
+          "url": "https://www.cnbc.com/2026/05/07/open-ai-trial-shivon-zilis-musk-altman-tesla-board.html"
+        },
+        {
+          "title": "微软报告：全球工作年龄人口 AI 使用率 Q1 2026 从 16.3% 升至 17.8%",
+          "url": "https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/"
+        }
+      ]
+    },
+    {
       "date": "2026-05-07",
       "items": [
         {
@@ -159,23 +180,6 @@
         {
           "title": "华为昇腾950PR订单激增：2026年AI芯片营收目标$120亿，中国算力加速自主化",
           "url": "https://www.androidheadlines.com/2026/05/huawei-china-ai-market-share-nvidia-exit-ascend-950.html"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-01",
-      "items": [
-        {
-          "title": "科技巨头 Q1 2026 财报：合计 AI 资本支出超 $6500 亿，盈利分化",
-          "url": "https://thenextweb.com/news/alphabet-amazon-meta-q1-2026-earnings-ai-cloud"
-        },
-        {
-          "title": "白宫起草方案允许联邦机构接入 Anthropic Mythos，同时封堵商业开放计划",
-          "url": "https://www.axios.com/2026/04/29/trump-anthropic-pentagon-ai-executive-order-gov"
-        },
-        {
-          "title": "SoftBank 成立 Roze AI：机器人自动化建设数据中心，H2 2026 赴美 IPO，目标估值 $1000 亿",
-          "url": "https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/"
         }
       ]
     },
