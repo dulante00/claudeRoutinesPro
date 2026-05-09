@@ -1,6 +1,39 @@
 {
   "history": [
     {
+      "date": "2026-05-09",
+      "items": [
+        {
+          "title": "Anthropic 发布 Claude Agent "梦境"记忆机制，Harvey 任务完成率提升 6×",
+          "url": "https://venturebeat.com/technology/anthropic-introduces-dreaming-a-system-that-lets-ai-agents-learn-from-their-own-mistakes"
+        },
+        {
+          "title": "OpenAI 发布三款 GPT-Realtime 语音 API，首次支持 GPT-5 级实时推理",
+          "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+        },
+        {
+          "title": "特朗普-习近平北京峰会（5/14-15）拟纳入首次官方 AI 风险对话",
+          "url": "https://english.cw.com.tw/article/article.action?id=4760"
+        },
+        {
+          "title": "Anthropic 拟以 $9000亿估值融资 $500亿，或创私募估值新高",
+          "url": "https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/"
+        },
+        {
+          "title": "Anthropic Mythos 向约 40 家机构限量开放，Firefox 漏洞发现量是前代 15×",
+          "url": "https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html"
+        },
+        {
+          "title": "OpenAI ChatGPT 广告测试扩展至英国、墨西哥、巴西、日本、韩国",
+          "url": "https://openai.com/index/testing-ads-in-chatgpt/"
+        },
+        {
+          "title": "Musk v. Altman 庭审第二周结束，5/11 起进入第三周",
+          "url": "https://abc7news.com/live-updates/elon-musk-sam-altman-live-updates-trial-enters-2nd-week-focus-shifting-openai-president-greg-brockman/19036397/"
+        }
+      ]
+    },
+    {
       "date": "2026-05-08",
       "items": [
         {
@@ -161,27 +194,6 @@
           "url": "https://techcrunch.com/2026/04/30/meta-says-its-business-ai-now-facilitates-10-million-conversations-a-week/"
         }
       ]
-    },
-    {
-      "date": "2026-05-02",
-      "items": [
-        {
-          "title": "五角大楼与8家科技公司签署AI军事协议，Anthropic再度出局",
-          "url": "https://thehill.com/policy/technology/5858995-pentagon-ai-companies-classified-work-deal/"
-        },
-        {
-          "title": "Anthropic Claude Security 公测上线：Opus 4.7 全库扫描漏洞并自动生成补丁",
-          "url": "https://siliconangle.com/2026/04/30/anthropic-announces-claude-security-public-beta-find-fix-software-vulnerabilities/"
-        },
-        {
-          "title": "Microsoft Agent 365 + M365 E7 Frontier Suite 上线：$15/$99 用户，Copilot 整合 Claude",
-          "url": "https://www.windowscentral.com/artificial-intelligence/microsoft-copilot/microsoft-365-copilot-wave-3-announcement"
-        },
-        {
-          "title": "华为昇腾950PR订单激增：2026年AI芯片营收目标$120亿，中国算力加速自主化",
-          "url": "https://www.androidheadlines.com/2026/05/huawei-china-ai-market-share-nvidia-exit-ascend-950.html"
-        }
-      ]
-    },
+    }
   ]
 }
