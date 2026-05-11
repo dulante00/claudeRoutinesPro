@@ -1,6 +1,59 @@
 {
   "history": [
     {
+      "date": "2026-05-11",
+      "items": [
+        {
+          "title": "Anthropic 营收年化突破 $300 亿，Q1 实现 80 倍增长",
+          "url": "https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth"
+        },
+        {
+          "title": "Anthropic 发布"教 Claude 为什么"训练研究：Haiku 4.5 代理对齐评分升至 100%",
+          "url": "https://www.anthropic.com/research/teaching-claude-why"
+        },
+        {
+          "title": "百度发布文心 5.1：LMArena 搜索基准国内第一、全球第四，预训练成本仅为业界 6%",
+          "url": "https://www.qbitai.com/2026/05/414496.html"
+        },
+        {
+          "title": "20 万 MCP 服务器暴露 STDIO 命令注入漏洞，Anthropic 称系设计特性",
+          "url": "https://venturebeat.com/security/mcp-stdio-flaw-200000-ai-agent-servers-exposed-ox-security-audit"
+        },
+        {
+          "title": "豆包宣布付费制：月费 68/200/500 元，中国"免费 AI 时代"正式终结",
+          "url": "https://36kr.com/p/3802970281041408"
+        },
+        {
+          "title": "Anthropic 宣布进军印度，班加罗尔开设亚太第二办公室",
+          "url": "https://www.anthropic.com/news/expanding-global-operations-to-india"
+        },
+        {
+          "title": "浙大校友用 AI 终结 32 年停滞：拉姆齐数 R(3,17) 从 92 提升至 93",
+          "url": "https://www.qbitai.com/2026/05/415031.html"
+        },
+        {
+          "title": "Redis 之父 antirez 用 C 为 DeepSeek V4 Flash 写专属推理引擎 ds4.c",
+          "url": "https://www.qbitai.com/2026/05/414316.html"
+        },
+        {
+          "title": "中国 LLM 市场清场加速：一周内 3 笔逾 $7 亿融资落地，VC 投资占比从 51% 降至 14%",
+          "url": "https://36kr.com/p/3802258052096004"
+        },
+        {
+          "title": "企业 GPU 平均利用率仅 5%，$4010 亿 AI 算力投资大规模闲置，专属 AI 云占比升至 35.9%",
+          "url": "https://venturebeat.com/infrastructure/5-gpu-utilization-the-401-billion-ai-infrastructure-problem-enterprises-cant-keep-ignoring"
+        },
+        {
+          "title": "Anthropic NLA 研究：自然语言自编码器首次曝光 Claude 内心独白",
+          "url": "https://www.qbitai.com/2026/05/414213.html"
+        },
+        {
+          "title": "安全审计发现约 5,000 个 vibe-coding 应用含 API 密钥等敏感数据",
+          "url": "https://venturebeat.com/security/vibe-coded-apps-shadow-ai-s3-bucket-crisis-ciso-audit-framework"
+        }
+      ]
+    },
+    {
       "date": "2026-05-10",
       "items": [
         {
@@ -177,31 +230,6 @@
           "url": "https://www.ghacks.net/2026/05/04/pentagon-signs-ai-deals-with-openai-google-microsoft-nvidia-and-others-cutting-out-anthropic/"
         }
       ]
-    },
-    {
-      "date": "2026-05-04",
-      "items": [
-        {
-          "title": "Mistral Medium 3.5：128B 全能旗舰，SWE-Bench Verified 77.6% 超越同级竞品",
-          "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5"
-        },
-        {
-          "title": "Sakana AI 推出 KAME：语音 AI"说话时同步思考"，MT-Bench 从 2.05 飙升至 6.43",
-          "url": "https://pub.sakana.ai/kame/"
-        },
-        {
-          "title": "Goldman Sachs：AI Agent 引爆的 $2850 亿 SaaS 蒸发属"过度恐慌"",
-          "url": "https://www.fool.com/investing/2026/05/03/goldman-sachs-says-the-artificial-intelligence-ai/"
-        },
-        {
-          "title": "OpenAI 为 ChatGPT 引入 Advanced Account Security：FIDO2 passkeys + Yubico 联名硬件密钥",
-          "url": "https://openai.com/index/advanced-account-security/"
-        },
-        {
-          "title": "韩国 KFTC 在亚开行年会宣布推出 AI Agent 支付平台",
-          "url": "https://en.sedaily.com/business/2026/05/03/kftc-to-launch-ai-agent-payment-platform-for-financial"
-        }
-      ]
-    },
+    }
   ]
 }
