@@ -1,6 +1,31 @@
 {
   "history": [
     {
+      "date": "2026-05-12",
+      "items": [
+        {
+          "title": "Google Android Show：Android 17 开发者预览 + Android XR AI 眼镜首批合作品牌公布（Warby Parker、Gentle Monster、Samsung）",
+          "url": "https://www.analyticsinsight.net/news/google-android-show-2026-to-detail-mixed-reality-ecosystem-with-android-xr"
+        },
+        {
+          "title": "OpenAI 成立 $40 亿企业 AI 部署子公司 DeployCo，19 家机构投资，收购 Tomoro 引入 150 名工程师",
+          "url": "https://openai.com/index/openai-launches-the-deployment-company/"
+        },
+        {
+          "title": "Musk v. Altman Week 3：Satya Nadella 批 OpenAI 董事会"业余之城"，Sam Altman 今日首次出庭",
+          "url": "https://www.cnbc.com/2026/05/11/microsoft-ceo-satya-nadella-musk-altman-trial.html"
+        },
+        {
+          "title": "OpenAI 发布 Codex 企业安全白皮书《Running Codex Safely》：沙盒隔离 + Compliance Logs + 速率翻倍",
+          "url": "https://openai.com/index/running-codex-safely/"
+        },
+        {
+          "title": "ChatGPT for Excel / Google Sheets 正式全球上线，Business 版免费试用至 2026年6月2日",
+          "url": "https://openai.com/news/"
+        }
+      ]
+    },
+    {
       "date": "2026-05-11",
       "items": [
         {
@@ -195,39 +220,6 @@
         {
           "title": "Cloudflare 发布 Infire：专为 LLM 推理设计的分离式 Prefill/Decode 引擎",
           "url": "https://www.infoq.com/news/2026/05/cloudflare-llm-infrastructure/"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-05",
-      "items": [
-        {
-          "title": "特朗普政府拟行政令：AI 模型发布前须经政府审查",
-          "url": "https://www.bloomberg.com/news/articles/2026-05-04/white-house-eyes-vetting-ai-models-before-release-ny-times-says"
-        },
-        {
-          "title": "Cerebras 赴纳斯达克 IPO：拟募资 $35 亿，估值 $265 亿，Q4 营收 $5.1 亿（同比+76%）",
-          "url": "https://www.cnbc.com/2026/05/04/cerebras-ipo-ai-chipmaker.html"
-        },
-        {
-          "title": "GPT-5.5 今日举办 AI 自主策划的庆生派对，Sam Altman 邀请马斯克出席",
-          "url": "https://www.latestly.com/technology/sam-altman-reveals-gpt-5-5-planned-its-own-launch-party-for-may-5-7416228.html"
-        },
-        {
-          "title": "Musk v. Altman 庭审第二周：开庭前 Musk 曾秘密联络 Brockman 商议和解",
-          "url": "https://www.cnbc.com/2026/05/04/musk-altman-open-ai-settlement-trial-brockman.html"
-        },
-        {
-          "title": "Google 员工抗议五角大楼 AI 合同，影响力已不及 Project Maven 时代",
-          "url": "https://fortune.com/2026/05/04/google-employee-backlash-pentagon-ai-contract-power-waned-since-project-maven/"
-        },
-        {
-          "title": "IBM 全球 CEO 研究：83% 认为 AI 成败核心在于员工适应，而非技术",
-          "url": "https://newsroom.ibm.com/2026-05-04-ibm-study-ceos-are-reshaping-c-suite-roles-for-the-ai-era"
-        },
-        {
-          "title": "五角大楼与 OpenAI、Google、Microsoft、Nvidia 等8家公司签署 AI 军事协议，Anthropic 再度出局",
-          "url": "https://www.ghacks.net/2026/05/04/pentagon-signs-ai-deals-with-openai-google-microsoft-nvidia-and-others-cutting-out-anthropic/"
         }
       ]
     }
