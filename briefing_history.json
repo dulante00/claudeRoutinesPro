@@ -1,6 +1,31 @@
 {
   "history": [
     {
+      "date": "2026-05-13",
+      "items": [
+        {
+          "title": "Anthropic 推出 Claude for Legal：12款法律专属插件 + 20+ MCP 连接器，Freshfields、Quinn Emanuel 等顶级律所已实战使用",
+          "url": "https://www.lawnext.com/2026/05/anthropic-goes-all-in-on-legal-releasing-more-than-20-connectors-and-12-practice-area-plugins-for-claude.html"
+        },
+        {
+          "title": "OpenAI 发布 Daybreak 网络安全平台：GPT-5.5 + Codex 驱动漏洞检测与自动补丁，8家安全巨头接入，对标 Anthropic Mythos",
+          "url": "https://thehackernews.com/2026/05/openai-launches-daybreak-for-ai-powered.html"
+        },
+        {
+          "title": "Google 发布 Gemini Intelligence：AI 深度集成 Android 系统层，跨应用任务自动化 + 自然语言 Widget + Gboard Rambler，Galaxy S26 / Pixel 10 夏季优先上线",
+          "url": "https://9to5google.com/2026/05/12/gemini-intelligence-announcement/"
+        },
+        {
+          "title": "Trump-Xi 北京峰会（5/14-15）AI 安全对话正式入议：拟建定期风险对话机制，斯坦福确认美中模型性能差距消弭",
+          "url": "https://www.cnbc.com/2026/05/11/trump-and-xi-face-a-test-over-ai-control.html"
+        },
+        {
+          "title": "百度 Create 2026 AI 开发者大会今日北京开幕，李彦宏主题演讲主打 AI 效率",
+          "url": "https://www.ofweek.com/ai/2026-05/ART-201718-8140-30687178.html"
+        }
+      ]
+    },
+    {
       "date": "2026-05-12",
       "items": [
         {
@@ -194,34 +219,5 @@
         }
       ]
     },
-    {
-      "date": "2026-05-06",
-      "items": [
-        {
-          "title": "OpenAI 发布 GPT-5.5 Instant：ChatGPT 默认模型换代，幻觉率降低 52.5%",
-          "url": "https://openai.com/index/gpt-5-5-instant/"
-        },
-        {
-          "title": "Anthropic 面向金融服务发布 10 款 AI Agent 模板，Claude Opus 4.7 在 Vals AI 基准夺冠（64.37%）",
-          "url": "https://www.anthropic.com/news/finance-agents"
-        },
-        {
-          "title": "IBM Think 2026：发布 AI 操作模型蓝图，watsonx Orchestrate 升级支持多 Agent 编排",
-          "url": "https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens"
-        },
-        {
-          "title": "美国运通发布 Agentic Commerce 开发者套件，收购 AI 费用平台 Hypercard",
-          "url": "https://www.americanexpress.com/en-us/company/agentic-commerce/"
-        },
-        {
-          "title": "Writer 发布 Playbook Triggers：无需人工指令的事件触发型企业 AI Agent",
-          "url": "https://venturebeat.com/technology/writer-launches-ai-agents-that-can-act-without-prompts-taking-on-amazon-microsoft-and-salesforce"
-        },
-        {
-          "title": "Cloudflare 发布 Infire：专为 LLM 推理设计的分离式 Prefill/Decode 引擎",
-          "url": "https://www.infoq.com/news/2026/05/cloudflare-llm-infrastructure/"
-        }
-      ]
-    }
   ]
 }
