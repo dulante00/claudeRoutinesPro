@@ -1,6 +1,228 @@
 {
   "history": [
     {
+      "date": "2026-05-14",
+      "items": [
+        {
+          "title": "Jensen Huang 临时搭乘空军一号赴京，Nvidia H200 出口解禁成中美峰会核心变量",
+          "url": "https://www.cnbc.com/2026/05/13/nvidia-says-ceo-jensen-huang-is-joining-trumps-china-trip.html"
+        },
+        {
+          "title": "Anthropic 发布 Claude for Small Business：15 个预建工作流 + 7 大工具一键集成，今日芝加哥启动全美十城路演",
+          "url": "https://techcrunch.com/2026/05/13/anthropic-courts-a-new-kind-of-customer-small-business-owners/"
+        },
+        {
+          "title": "腾讯 Q1 2026 财报：净利润增 21% 至 581 亿，Hy3 preview 登顶 OpenRouter，WorkBuddy 成国内最大 AI 智能体",
+          "url": "https://finance.sina.com.cn/tech/roll/2026-05-13/doc-inhxtzph9313035.shtml"
+        },
+        {
+          "title": "Google I/O 2026 五天后开幕（5/19-20），Gemini 4 与 Android 17 Adaptive Everywhere 有望同台亮相",
+          "url": "https://www.androidauthority.com/what-to-expect-from-google-io-2026-3664979/"
+        },
+        {
+          "title": "腾讯批准收购喜马拉雅，音乐 Q1 营收 79 亿元，AI 音乐成新增长变量",
+          "url": "https://view.inews.qq.com/a/20260512A09Z6700"
+        },
+        {
+          "title": "美国批准向10家中国科技公司出售 Nvidia H200，附25%收入分成，但北京叫停下单",
+          "url": "https://www.cnbc.com/2026/05/14/us-clears-h200-chip-sales-to-10-china-firms-as-nvidia-ceo-looks-for-breakthrough.html"
+        },
+        {
+          "title": "Anthropic 拟以 $3 亿+ 收购 SDK 创企 Stainless（同时服务 OpenAI 与 Google）",
+          "url": "https://winbuzzer.com/2026/05/14/anthropic-in-talks-to-buy-developer-tools-startup-xcxwbn/"
+        },
+        {
+          "title": "Musk v. Altman 进入结案陈词：Musk 出访中国，律师代为出席道歉",
+          "url": "https://www.axios.com/2026/05/14/musk-closing-arguments-openai-altman"
+        },
+        {
+          "title": "习近平会见马斯克、库克等随行美国科技 CEO：中国大门只会越开越大",
+          "url": "https://www.cnbc.com/2026/05/14/xi-china-open-us-business-ai-chips.html"
+        },
+        {
+          "title": "前阿里 Qwen 负责人林俊旸创业：世界模型 + 具身 AI，首轮估值约 $20 亿",
+          "url": "https://www.qbitai.com/2026/05/416963.html"
+        },
+        {
+          "title": "百度 Create 2026：李彦宏提出以 DAA（日活智能体数）取代 Token 消耗衡量 AI 平台价值",
+          "url": "https://finance.sina.com.cn/tech/digi/2026-05-13/doc-inhxtkrt4626639.shtml"
+        },
+        {
+          "title": "AI 开发者用 OpenAI Codex + Claude 5周复刻 RAR 压缩算法，生成5.5万行代码",
+          "url": "https://www.80aj.com/2026/05/14/ai-rar-compression-llm/"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-13",
+      "items": [
+        {
+          "title": "Anthropic 推出 Claude for Legal：12款法律专属插件 + 20+ MCP 连接器，Freshfields、Quinn Emanuel 等顶级律所已实战使用",
+          "url": "https://www.lawnext.com/2026/05/anthropic-goes-all-in-on-legal-releasing-more-than-20-connectors-and-12-practice-area-plugins-for-claude.html"
+        },
+        {
+          "title": "OpenAI 发布 Daybreak 网络安全平台：GPT-5.5 + Codex 驱动漏洞检测与自动补丁，8家安全巨头接入，对标 Anthropic Mythos",
+          "url": "https://thehackernews.com/2026/05/openai-launches-daybreak-for-ai-powered.html"
+        },
+        {
+          "title": "Google 发布 Gemini Intelligence：AI 深度集成 Android 系统层，跨应用任务自动化 + 自然语言 Widget + Gboard Rambler，Galaxy S26 / Pixel 10 夏季优先上线",
+          "url": "https://9to5google.com/2026/05/12/gemini-intelligence-announcement/"
+        },
+        {
+          "title": "Trump-Xi 北京峰会（5/14-15）AI 安全对话正式入议：拟建定期风险对话机制，斯坦福确认美中模型性能差距消弭",
+          "url": "https://www.cnbc.com/2026/05/11/trump-and-xi-face-a-test-over-ai-control.html"
+        },
+        {
+          "title": "百度 Create 2026 AI 开发者大会今日北京开幕，李彦宏主题演讲主打 AI 效率",
+          "url": "https://www.ofweek.com/ai/2026-05/ART-201718-8140-30687178.html"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-12",
+      "items": [
+        {
+          "title": "Google Android Show：Android 17 开发者预览 + Android XR AI 眼镜首批合作品牌公布（Warby Parker、Gentle Monster、Samsung）",
+          "url": "https://www.analyticsinsight.net/news/google-android-show-2026-to-detail-mixed-reality-ecosystem-with-android-xr"
+        },
+        {
+          "title": "OpenAI 成立 $40 亿企业 AI 部署子公司 DeployCo，19 家机构投资，收购 Tomoro 引入 150 名工程师",
+          "url": "https://openai.com/index/openai-launches-the-deployment-company/"
+        },
+        {
+          "title": "Musk v. Altman Week 3：Satya Nadella 批 OpenAI 董事会"业余之城"，Sam Altman 今日首次出庭",
+          "url": "https://www.cnbc.com/2026/05/11/microsoft-ceo-satya-nadella-musk-altman-trial.html"
+        },
+        {
+          "title": "OpenAI 发布 Codex 企业安全白皮书《Running Codex Safely》：沙盒隔离 + Compliance Logs + 速率翻倍",
+          "url": "https://openai.com/index/running-codex-safely/"
+        },
+        {
+          "title": "ChatGPT for Excel / Google Sheets 正式全球上线，Business 版免费试用至 2026年6月2日",
+          "url": "https://openai.com/news/"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-11",
+      "items": [
+        {
+          "title": "Anthropic 营收年化突破 $300 亿，Q1 实现 80 倍增长",
+          "url": "https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth"
+        },
+        {
+          "title": "Anthropic 发布"教 Claude 为什么"训练研究：Haiku 4.5 代理对齐评分升至 100%",
+          "url": "https://www.anthropic.com/research/teaching-claude-why"
+        },
+        {
+          "title": "百度发布文心 5.1：LMArena 搜索基准国内第一、全球第四，预训练成本仅为业界 6%",
+          "url": "https://www.qbitai.com/2026/05/414496.html"
+        },
+        {
+          "title": "20 万 MCP 服务器暴露 STDIO 命令注入漏洞，Anthropic 称系设计特性",
+          "url": "https://venturebeat.com/security/mcp-stdio-flaw-200000-ai-agent-servers-exposed-ox-security-audit"
+        },
+        {
+          "title": "豆包宣布付费制：月费 68/200/500 元，中国"免费 AI 时代"正式终结",
+          "url": "https://36kr.com/p/3802970281041408"
+        },
+        {
+          "title": "Anthropic 宣布进军印度，班加罗尔开设亚太第二办公室",
+          "url": "https://www.anthropic.com/news/expanding-global-operations-to-india"
+        },
+        {
+          "title": "浙大校友用 AI 终结 32 年停滞：拉姆齐数 R(3,17) 从 92 提升至 93",
+          "url": "https://www.qbitai.com/2026/05/415031.html"
+        },
+        {
+          "title": "Redis 之父 antirez 用 C 为 DeepSeek V4 Flash 写专属推理引擎 ds4.c",
+          "url": "https://www.qbitai.com/2026/05/414316.html"
+        },
+        {
+          "title": "中国 LLM 市场清场加速：一周内 3 笔逾 $7 亿融资落地，VC 投资占比从 51% 降至 14%",
+          "url": "https://36kr.com/p/3802258052096004"
+        },
+        {
+          "title": "企业 GPU 平均利用率仅 5%，$4010 亿 AI 算力投资大规模闲置，专属 AI 云占比升至 35.9%",
+          "url": "https://venturebeat.com/infrastructure/5-gpu-utilization-the-401-billion-ai-infrastructure-problem-enterprises-cant-keep-ignoring"
+        },
+        {
+          "title": "Anthropic NLA 研究：自然语言自编码器首次曝光 Claude 内心独白",
+          "url": "https://www.qbitai.com/2026/05/414213.html"
+        },
+        {
+          "title": "安全审计发现约 5,000 个 vibe-coding 应用含 API 密钥等敏感数据",
+          "url": "https://venturebeat.com/security/vibe-coded-apps-shadow-ai-s3-bucket-crisis-ciso-audit-framework"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-10",
+      "items": [
+        {
+          "title": "DeepSeek首轮融资500亿元创纪录，梁文锋自掏200亿，估值515亿美元，V4.1定档6月支持MCP",
+          "url": "https://www.qbitai.com/2026/05/414432.html"
+        },
+        {
+          "title": "Google I/O 2026 定于5月19-20日，Gemini 4预期重磅发布，Android Show 5月12日先行",
+          "url": "https://easternherald.com/2026/05/09/google-io-2026-android-17-gemini-smart-glasses/"
+        },
+        {
+          "title": "国家网信办/发改委/工信部联合发布《智能体规范应用与创新发展实施意见》，列出19个应用场景和AIP标准",
+          "url": "https://www.ithome.com/0/947/912.htm"
+        },
+        {
+          "title": "Anthropic Claude Managed Agents三大新功能：Advisor Tool、Claude Code Auto Mode、iOS/Android交互式应用",
+          "url": "https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/"
+        },
+        {
+          "title": "Musk v. Altman 庭审第三周5月11日开庭，Musk方即将完成论证",
+          "url": "https://www.nbcnews.com/tech/tech-news/elon-musk-testimony-day-three-sam-altman-openai-trial-rcna342967"
+        },
+        {
+          "title": "xAI Grok 4.3 API正式开放，强化Agent性能并降价，8款旧版模型5月15日退役",
+          "url": "https://artificialanalysis.ai/articles/xai-launches-grok-4-3-with-improved-agentic-performance-and-lower-pricing"
+        },
+        {
+          "title": "DeepSeek V4.1定档6月，首次原生支持MCP协议，新增图像/音频理解",
+          "url": "https://www.ithome.com/0/947/947.htm"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-09",
+      "items": [
+        {
+          "title": "Anthropic 发布 Claude Agent "梦境"记忆机制，Harvey 任务完成率提升 6×",
+          "url": "https://venturebeat.com/technology/anthropic-introduces-dreaming-a-system-that-lets-ai-agents-learn-from-their-own-mistakes"
+        },
+        {
+          "title": "OpenAI 发布三款 GPT-Realtime 语音 API，首次支持 GPT-5 级实时推理",
+          "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+        },
+        {
+          "title": "特朗普-习近平北京峰会（5/14-15）拟纳入首次官方 AI 风险对话",
+          "url": "https://english.cw.com.tw/article/article.action?id=4760"
+        },
+        {
+          "title": "Anthropic 拟以 $9000亿估值融资 $500亿，或创私募估值新高",
+          "url": "https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/"
+        },
+        {
+          "title": "Anthropic Mythos 向约 40 家机构限量开放，Firefox 漏洞发现量是前代 15×",
+          "url": "https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html"
+        },
+        {
+          "title": "OpenAI ChatGPT 广告测试扩展至英国、墨西哥、巴西、日本、韩国",
+          "url": "https://openai.com/index/testing-ads-in-chatgpt/"
+        },
+        {
+          "title": "Musk v. Altman 庭审第二周结束，5/11 起进入第三周",
+          "url": "https://abc7news.com/live-updates/elon-musk-sam-altman-live-updates-trial-enters-2nd-week-focus-shifting-openai-president-greg-brockman/19036397/"
+        }
+      ]
+    },
+    {
       "date": "2026-05-08",
       "items": [
         {
@@ -18,168 +240,6 @@
         {
           "title": "微软报告：全球工作年龄人口 AI 使用率 Q1 2026 从 16.3% 升至 17.8%",
           "url": "https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-07",
-      "items": [
-        {
-          "title": "Anthropic 承诺向 Google Cloud 支出 $2000 亿，锁定 5 年 TPU 算力",
-          "url": "https://www.engadget.com/2165585/anthropic-reportedly-agrees-to-pay-google-200-billion-for-chips-and-cloud-access/"
-        },
-        {
-          "title": "Musk v. Altman 第二周庭审：前 CTO Murati 出庭作证，指 Altman 制造混乱、对高管说谎",
-          "url": "https://www.usnews.com/news/top-news/articles/2026-05-06/in-openai-trial-former-technology-chief-says-altman-sowed-chaos-distrust-among-top-executives"
-        },
-        {
-          "title": "Google 内部测试 \"Remy\"：24/7 主动型 AI 助理，将 Gemini 从回答升级为主动行动",
-          "url": "https://www.itpro.com/technology/artificial-intelligence/google-is-building-its-own-openclaw-alternative-remy-elevates-the-gemini-app-into-a-true-assistant"
-        },
-        {
-          "title": "Samsung 市值突破 $1 万亿，成亚洲第二家万亿美元公司",
-          "url": "https://www.bloomberg.com/news/articles/2026-05-06/samsung-hits-1-trillion-valuation-joining-tsmc-in-elite-club"
-        },
-        {
-          "title": "QuantWare 完成 $1.78 亿融资，量产超导量子处理器，布局 AI 时代量子硬件开放架构",
-          "url": "https://techstartups.com/2026/05/06/top-tech-news-today-may-6-2026/"
-        },
-        {
-          "title": "AMD AI 芯片业务前景超预期，带动美国芯片股全线上涨",
-          "url": "https://techstartups.com/2026/05/06/top-tech-news-today-may-6-2026/"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-06",
-      "items": [
-        {
-          "title": "OpenAI 发布 GPT-5.5 Instant：ChatGPT 默认模型换代，幻觉率降低 52.5%",
-          "url": "https://openai.com/index/gpt-5-5-instant/"
-        },
-        {
-          "title": "Anthropic 面向金融服务发布 10 款 AI Agent 模板，Claude Opus 4.7 在 Vals AI 基准夺冠（64.37%）",
-          "url": "https://www.anthropic.com/news/finance-agents"
-        },
-        {
-          "title": "IBM Think 2026：发布 AI 操作模型蓝图，watsonx Orchestrate 升级支持多 Agent 编排",
-          "url": "https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens"
-        },
-        {
-          "title": "美国运通发布 Agentic Commerce 开发者套件，收购 AI 费用平台 Hypercard",
-          "url": "https://www.americanexpress.com/en-us/company/agentic-commerce/"
-        },
-        {
-          "title": "Writer 发布 Playbook Triggers：无需人工指令的事件触发型企业 AI Agent",
-          "url": "https://venturebeat.com/technology/writer-launches-ai-agents-that-can-act-without-prompts-taking-on-amazon-microsoft-and-salesforce"
-        },
-        {
-          "title": "Cloudflare 发布 Infire：专为 LLM 推理设计的分离式 Prefill/Decode 引擎",
-          "url": "https://www.infoq.com/news/2026/05/cloudflare-llm-infrastructure/"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-05",
-      "items": [
-        {
-          "title": "特朗普政府拟行政令：AI 模型发布前须经政府审查",
-          "url": "https://www.bloomberg.com/news/articles/2026-05-04/white-house-eyes-vetting-ai-models-before-release-ny-times-says"
-        },
-        {
-          "title": "Cerebras 赴纳斯达克 IPO：拟募资 $35 亿，估值 $265 亿，Q4 营收 $5.1 亿（同比+76%）",
-          "url": "https://www.cnbc.com/2026/05/04/cerebras-ipo-ai-chipmaker.html"
-        },
-        {
-          "title": "GPT-5.5 今日举办 AI 自主策划的庆生派对，Sam Altman 邀请马斯克出席",
-          "url": "https://www.latestly.com/technology/sam-altman-reveals-gpt-5-5-planned-its-own-launch-party-for-may-5-7416228.html"
-        },
-        {
-          "title": "Musk v. Altman 庭审第二周：开庭前 Musk 曾秘密联络 Brockman 商议和解",
-          "url": "https://www.cnbc.com/2026/05/04/musk-altman-open-ai-settlement-trial-brockman.html"
-        },
-        {
-          "title": "Google 员工抗议五角大楼 AI 合同，影响力已不及 Project Maven 时代",
-          "url": "https://fortune.com/2026/05/04/google-employee-backlash-pentagon-ai-contract-power-waned-since-project-maven/"
-        },
-        {
-          "title": "IBM 全球 CEO 研究：83% 认为 AI 成败核心在于员工适应，而非技术",
-          "url": "https://newsroom.ibm.com/2026-05-04-ibm-study-ceos-are-reshaping-c-suite-roles-for-the-ai-era"
-        },
-        {
-          "title": "五角大楼与 OpenAI、Google、Microsoft、Nvidia 等8家公司签署 AI 军事协议，Anthropic 再度出局",
-          "url": "https://www.ghacks.net/2026/05/04/pentagon-signs-ai-deals-with-openai-google-microsoft-nvidia-and-others-cutting-out-anthropic/"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-04",
-      "items": [
-        {
-          "title": "Mistral Medium 3.5：128B 全能旗舰，SWE-Bench Verified 77.6% 超越同级竞品",
-          "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5"
-        },
-        {
-          "title": "Sakana AI 推出 KAME：语音 AI"说话时同步思考"，MT-Bench 从 2.05 飙升至 6.43",
-          "url": "https://pub.sakana.ai/kame/"
-        },
-        {
-          "title": "Goldman Sachs：AI Agent 引爆的 $2850 亿 SaaS 蒸发属"过度恐慌"",
-          "url": "https://www.fool.com/investing/2026/05/03/goldman-sachs-says-the-artificial-intelligence-ai/"
-        },
-        {
-          "title": "OpenAI 为 ChatGPT 引入 Advanced Account Security：FIDO2 passkeys + Yubico 联名硬件密钥",
-          "url": "https://openai.com/index/advanced-account-security/"
-        },
-        {
-          "title": "韩国 KFTC 在亚开行年会宣布推出 AI Agent 支付平台",
-          "url": "https://en.sedaily.com/business/2026/05/03/kftc-to-launch-ai-agent-payment-platform-for-financial"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-03",
-      "items": [
-        {
-          "title": "Musk v. Altman 庭审第一周收官：xAI承认"部分"蒸馏OpenAI模型训练Grok",
-          "url": "https://www.cnbc.com/2026/05/02/musk-testimony-dominated-first-week-musk-v-altman-trial-in-oakland.html"
-        },
-        {
-          "title": "OpenAI CFO：需求是"垂直的墙"，IPO悄然推迟至2027年",
-          "url": "https://www.bloomberg.com/news/articles/2026-05-01/openai-finance-chief-sees-vertical-wall-of-demand-for-products"
-        },
-        {
-          "title": "四大超算巨头2026年AI资本支出逼近$7000亿，电力冷却成瓶颈",
-          "url": "https://fortune.com/2026/04/30/big-tech-hyperscalers-will-spend-700-billion-on-ai-infrastructure-this-year-with-no-clear-end-in-sight-eye-on-ai/"
-        },
-        {
-          "title": "Nature：最先进AI Agent在复杂科学任务上仍被人类科学家完胜",
-          "url": "https://www.nature.com/articles/d41586-026-01199-z"
-        },
-        {
-          "title": "Meta Business AI破千万对话/周，年初以来增长10×",
-          "url": "https://techcrunch.com/2026/04/30/meta-says-its-business-ai-now-facilitates-10-million-conversations-a-week/"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-02",
-      "items": [
-        {
-          "title": "五角大楼与8家科技公司签署AI军事协议，Anthropic再度出局",
-          "url": "https://thehill.com/policy/technology/5858995-pentagon-ai-companies-classified-work-deal/"
-        },
-        {
-          "title": "Anthropic Claude Security 公测上线：Opus 4.7 全库扫描漏洞并自动生成补丁",
-          "url": "https://siliconangle.com/2026/04/30/anthropic-announces-claude-security-public-beta-find-fix-software-vulnerabilities/"
-        },
-        {
-          "title": "Microsoft Agent 365 + M365 E7 Frontier Suite 上线：$15/$99 用户，Copilot 整合 Claude",
-          "url": "https://www.windowscentral.com/artificial-intelligence/microsoft-copilot/microsoft-365-copilot-wave-3-announcement"
-        },
-        {
-          "title": "华为昇腾950PR订单激增：2026年AI芯片营收目标$120亿，中国算力加速自主化",
-          "url": "https://www.androidheadlines.com/2026/05/huawei-china-ai-market-share-nvidia-exit-ascend-950.html"
         }
       ]
     },
