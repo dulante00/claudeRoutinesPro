@@ -15,22 +15,71 @@ description: 每日 LLM 与科技新闻简报,抓取、筛选、整理成中文�
 ## 信息源(按优先级从高到低)
 
 ### 一级源(必查)
+
+#### 顶级中文媒体
 - **机器之心** https://www.jiqizhixin.com/
 - **量子位** https://www.qbitai.com/
-- **Anthropic 官方博客** https://www.anthropic.com/news (英文,翻译成中文)
-- **OpenAI Blog** https://openai.com/blog (英文,翻译成中文)
-- **Google AI Blog** https://blog.google/technology/ai/ (英文,翻译成中文；Gemini / Gemma 系列唯一官方发布渠道)
+- **极客公园** https://www.geekpark.net/ (深度产品体验 + 创始人独家访谈，质量高于一般媒体)
+
+#### 国际头部模型厂商官方博客(各系列唯一权威发布渠道)
+- **Anthropic** https://www.anthropic.com/news (Claude 系列)
+- **OpenAI** https://openai.com/blog (GPT / Sora / Codex 系列)
+- **Google DeepMind** https://blog.google/technology/ai/ (Gemini / Gemma / Veo 系列)
+- **Meta AI** https://ai.meta.com/blog/ (Llama 系列；当前最重要的开源模型线，此前完全缺失)
+- **Hugging Face Blog** https://huggingface.co/blog (开源生态风向标；新模型/数据集/工具发布首发地)
+
+#### 国产大模型官方渠道(仅在有明确发布时查阅)
+- **阿里 Qwen** https://qwenlm.github.io/blog/ (通义千问 / Qwen 系列官方)
+- **字节豆包** https://team.doubao.com/zh/special/blog (豆包 / 云雀模型官方)
+- **智谱 AI** https://zhipuai.cn/news (GLM 系列官方)
+- **MiniMax** https://www.minimaxi.com/news (MiniMax / Hailuo 系列)
+- **月之暗面 Kimi** https://kimi.moonshot.cn/ (Moonshot 系列；通过 36 氪/机器之心补充)
+- **小米 AI** https://ai.mi.com/ (MiMo / 小米大模型；同时关注小米官方微博 https://weibo.com/xiaomi)
+- **零一万物** https://www.lingyiwanwu.com/news (Yi 系列)
+- **Mistral AI** https://mistral.ai/news/ (欧洲开源旗帜；Mistral / Mixtral 系列)
+- **xAI** https://x.ai/blog (Grok 系列官方)
 
 ### 二级源(有余力就查)
+
+#### 中文媒体补充
 - **36氪 AI 频道** https://36kr.com/information/AI/
-- **InfoQ 中文** https://www.infoq.cn/topic/AI
-- **少数派** https://sspai.com/ (科技类)
-- **Hacker News** https://news.ycombinator.com/ (挑 AI/LLM 相关的,用中文总结)
-- **VentureBeat AI** https://venturebeat.com/category/ai (英文,翻译成中文；模型发布当日必有深度报道，英文 AI 媒体中覆盖最稳定)
+- **钛媒体 AI** https://www.tmtpost.com/ (商业化 + 融资报道，与 36 氪互补)
+- **虎嗅科技** https://www.huxiu.com/ (AI 商业模式深度分析)
+- **智东西** https://zhidx.com/ (具身智能 + AI 硬件 + 端侧模型)
+- **InfoQ 中文** https://www.infoq.cn/topic/AI (工程师向，架构/工程实践)
+- **少数派** https://sspai.com/ (AI 工具产品向，消费者视角)
+
+#### 英文媒体
+- **VentureBeat AI** https://venturebeat.com/category/ai (模型发布当日必有深度报道，英文 AI 媒体中覆盖最稳定)
+- **TechCrunch AI** https://techcrunch.com/category/artificial-intelligence/ (融资 + 产品新闻)
+- **The Verge AI** https://www.theverge.com/ai-artificial-intelligence (产品向，大众读者视角)
+- **Ars Technica** https://arstechnica.com/ (技术细节准确，模型评测 + 基础设施)
+- **9to5Google** https://9to5google.com/ (Google / Android AI 产品第一手)
+- **9to5Mac** https://9to5mac.com/ (Apple / Anthropic 产品第一手)
+- **Hacker News** https://news.ycombinator.com/ (挑 AI/LLM 相关高分帖，用中文总结)
+
+#### 实时排行榜与动态追踪(重要：反映市场真实采用情况)
+- **OpenRouter Rankings** https://openrouter.ai/rankings (各模型实时 token 调用量排行；今后腾讯 Hy3 等数据直接从此获取，不依赖二手报道)
+- **LMArena / LMSYS Chatbot Arena** https://lmarena.ai/ (人类偏好 Elo 排行榜；排名变化本身是新闻)
+- **ArtificialAnalysis** https://artificialanalysis.ai/ (模型速度 / 价格 / 质量综合横评；有新模型时必查)
+- **Hugging Face 趋势模型** https://huggingface.co/models?sort=trending (开源社区热度风向)
 
 ### 三级源(深度补充)
-- **arXiv cs.CL** https://arxiv.org/list/cs.CL/recent (挑当天 Top 讨论论文)
-- **Dwarkesh Podcast** https://www.dwarkesh.com/ (英文,翻译成中文；专做 AI/科技顶级人物长篇访谈，受访者包括黄仁勋、Sam Altman、Dario Amodei 等；每次发布几乎都是行业级事件，优先级高于普通三级源)
+
+#### 学术与研究
+- **arXiv cs.CL** https://arxiv.org/list/cs.CL/recent (NLP / LLM 方向论文)
+- **arXiv cs.AI** https://arxiv.org/list/cs.AI/recent (AI 系统 / 推理 / Agent 方向)
+- **Papers with Code** https://paperswithcode.com/ (论文 + 开源代码追踪，比 arXiv 更易筛选热门)
+
+#### AI 工具与开源生态
+- **Product Hunt** https://www.producthunt.com/ (每日新 AI 工具上线；"Product of the Day" 中 AI 类必看)
+- **GitHub Trending** https://github.com/trending (AI 相关开源项目热度；周趋势比日趋势更有信号量)
+- **Simon Willison's Blog** https://simonwillison.net/ (AI 工具实践顶级博主；每篇均有可核实的具体测评数据)
+
+#### 播客 / Newsletter
+- **Dwarkesh Podcast** https://www.dwarkesh.com/ (AI/科技顶级人物长篇访谈；黄仁勋、Altman、Amodei 等；每次发布几乎是行业级事件，优先级高于普通三级源)
+- **The Batch (Andrew Ng)** https://www.deeplearning.ai/the-batch/ (吴恩达每周 AI 精选；深度准确，适合周末补充)
+- **TLDR AI** https://tldr.tech/ai (每日 AI 简报聚合；条目密度高，适合扫漏兜底)
 
 ---
 
@@ -49,11 +98,18 @@ date +%Y-%m-%d
 - 发布日期早于 `TODAY - 1天` 的文章**强制丢弃**
 
 **优先级排序:**
-1. 🔥 重大模型发布(GPT、Claude、Gemini、国产大模型新版本)
+1. 🔥 重大模型发布(GPT、Claude、Gemini、Llama、Qwen、国产大模型新版本；**必须从厂商官方博客核实，不依赖二手报道**)
 2. 🔥 突破性论文(被广泛讨论,而非普通 arXiv 预印本)
 3. 👀 重要产品更新(影响开发者或普通用户的功能)
 4. 👀 行业重大动态(融资、收购、政策)
-5. 📌 其他有意思的科技消息
+5. 👀 排行榜重大变化(OpenRouter 使用量榜首易主、LMArena Elo 分超越 GPT-4 级等；变化量需量化，如"超越前代 10 倍"而非"排名靠前")
+6. 📌 其他有意思的科技消息
+
+**国产模型追踪特别说明:**
+- 小米 MiMo / AI 相关：优先查 https://ai.mi.com/ 和小米官方微博，其次 36 氪/极客公园
+- 字节豆包：优先查 https://team.doubao.com/zh/special/blog，次查 36 氪/机器之心
+- 阿里 Qwen：优先查 https://qwenlm.github.io/blog/，同时查 HuggingFace 新模型页
+- 上述国产模型如当天官方无新发布，不必强行纳入简报
 
 **必须过滤掉:**
 - 标题党("震惊!""颠覆!""碾压")
