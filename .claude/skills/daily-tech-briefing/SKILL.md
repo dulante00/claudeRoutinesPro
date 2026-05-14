@@ -59,10 +59,22 @@ description: 每日 LLM 与科技新闻简报,抓取、筛选、整理成中文�
 - **Hacker News** https://news.ycombinator.com/ (挑 AI/LLM 相关高分帖，用中文总结)
 
 #### 实时排行榜与动态追踪(重要：反映市场真实采用情况)
-- **OpenRouter Rankings** https://openrouter.ai/rankings (各模型实时 token 调用量排行；今后腾讯 Hy3 等数据直接从此获取，不依赖二手报道)
+- **OpenRouter Rankings** https://openrouter.ai/rankings (各模型实时 token 调用量排行；腾讯 Hy3 等数据直接从此获取，不依赖二手报道)
 - **LMArena / LMSYS Chatbot Arena** https://lmarena.ai/ (人类偏好 Elo 排行榜；排名变化本身是新闻)
 - **ArtificialAnalysis** https://artificialanalysis.ai/ (模型速度 / 价格 / 质量综合横评；有新模型时必查)
 - **Hugging Face 趋势模型** https://huggingface.co/models?sort=trending (开源社区热度风向)
+
+#### AI 编码工具 Changelog（开发者受众极大，更新即新闻）
+- **Cursor Changelog** https://changelog.cursor.com/ (AI 编码工具中迭代最快，功能更新频率高)
+- **GitHub Copilot Blog** https://github.blog/tag/github-copilot/ (用户基数最大的 AI 编码助手；Microsoft 出品)
+- **Windsurf / Codeium Blog** https://codeium.com/blog (Cursor 主要竞争对手；Cascade Agent 模式)
+- **Replit Blog** https://blog.replit.com/ (在线 AI 编码平台；覆盖非专业开发者群体)
+
+#### AI 推理基础设施（速度 / 成本基准本身构成新闻）
+- **Groq Blog** https://groq.com/blog/ (LPU 极速推理；速度基准刷新时必报)
+- **Cerebras Blog** https://cerebras.net/blog/ (晶圆级芯片；推理速度世界纪录保持者)
+- **Together AI Blog** https://www.together.ai/blog (开源模型推理平台；反映开源模型商用采用情况)
+- **Replicate Blog** https://replicate.com/blog (模型 API 化；哪些模型被开发者大量调用)
 
 ### 三级源(深度补充)
 
@@ -71,15 +83,41 @@ description: 每日 LLM 与科技新闻简报,抓取、筛选、整理成中文�
 - **arXiv cs.AI** https://arxiv.org/list/cs.AI/recent (AI 系统 / 推理 / Agent 方向)
 - **Papers with Code** https://paperswithcode.com/ (论文 + 开源代码追踪，比 arXiv 更易筛选热门)
 
-#### AI 工具与开源生态
-- **Product Hunt** https://www.producthunt.com/ (每日新 AI 工具上线；"Product of the Day" 中 AI 类必看)
-- **GitHub Trending** https://github.com/trending (AI 相关开源项目热度；周趋势比日趋势更有信号量)
-- **Simon Willison's Blog** https://simonwillison.net/ (AI 工具实践顶级博主；每篇均有可核实的具体测评数据)
+#### AI 工具目录（发现新兴工具）
+- **There's An AI For That** https://theresanaiforthat.com/ (最大 AI 工具目录；每日新增工具列表，适合发现冷门但实用工具)
+- **Product Hunt AI** https://www.producthunt.com/ ("Product of the Day" AI 类；发布首日热度反映市场兴趣)
+- **Simon Willison's Blog** https://simonwillison.net/ (AI 工具实践顶级博主；每篇含可核实具体测评数据)
+
+#### AI 垂直领域官方渠道（视频 / 语音 / 图像 / 音乐）
+- **Runway ML Blog** https://runwayml.com/blog/ (视频生成领域引领者；Gen 系列官方)
+- **ElevenLabs Blog** https://elevenlabs.io/blog (语音合成领域引领者；每次更新都影响语音 AI 格局)
+- **Suno Blog** https://suno.com/blog (AI 音乐生成代表产品)
+- **Stability AI News** https://stability.ai/news (Stable Diffusion 系列；图像/视频开源生态核心)
+- **Kling AI / 快手可灵** https://klingai.com/ (国内视频生成代表；通过 36 氪/量子位追踪)
+
+#### AI Agent 框架（开发者生态关键基础设施）
+- **LangChain Blog** https://blog.langchain.dev/ (最广泛使用的 Agent 框架；新版本即影响数十万开发者)
+- **LlamaIndex Blog** https://www.llamaindex.ai/blog (RAG / 检索增强生成代表框架)
+- **CrewAI Blog** https://www.crewai.com/blog (多 Agent 协作框架；企业采用增速快)
+
+#### GitHub 精确追踪
+- **GitHub Trending Python（日榜）** https://github.com/trending/python?since=daily (每日 AI 开源项目热度；Python 榜比综合榜 AI 信号更纯)
+- **ollama Releases** https://github.com/ollama/ollama/releases (本地 LLM 运行工具；用户基数最大的本地推理工具)
+- **vLLM Releases** https://github.com/vllm-project/vllm/releases (生产级高性能推理引擎；主流云厂商后端)
+- **llama.cpp Releases** https://github.com/ggerganov/llama.cpp/releases (端侧 / 边缘推理基准工具)
+- **open-webui Releases** https://github.com/open-webui/open-webui/releases (本地模型 Web UI；新功能集成速度快)
+- **ComfyUI Releases** https://github.com/comfyanonymous/ComfyUI/releases (图像 / 视频生成工作流；节点式 AI 创作社区核心)
+
+#### 开发者社区（噪声高但首发信号强）
+- **Reddit r/LocalLLaMA** https://www.reddit.com/r/LocalLLaMA/ (开源 / 本地模型最活跃社区；新模型量化包、跑分、破解限制首发地)
+- **Reddit r/MachineLearning** https://www.reddit.com/r/MachineLearning/ (学术向；顶级论文讨论)
+- **Reddit r/singularity** https://www.reddit.com/r/singularity/ (AI 进展综合讨论；热门帖反映大众认知风向)
 
 #### 播客 / Newsletter
 - **Dwarkesh Podcast** https://www.dwarkesh.com/ (AI/科技顶级人物长篇访谈；黄仁勋、Altman、Amodei 等；每次发布几乎是行业级事件，优先级高于普通三级源)
 - **The Batch (Andrew Ng)** https://www.deeplearning.ai/the-batch/ (吴恩达每周 AI 精选；深度准确，适合周末补充)
 - **TLDR AI** https://tldr.tech/ai (每日 AI 简报聚合；条目密度高，适合扫漏兜底)
+- **Latent Space Podcast** https://www.latent.space/ (AI 工程师向；深度技术访谈，受众为 ML 工程师和研究员)
 
 ---
 
@@ -110,6 +148,16 @@ date +%Y-%m-%d
 - 字节豆包：优先查 https://team.doubao.com/zh/special/blog，次查 36 氪/机器之心
 - 阿里 Qwen：优先查 https://qwenlm.github.io/blog/，同时查 HuggingFace 新模型页
 - 上述国产模型如当天官方无新发布，不必强行纳入简报
+
+**GitHub / 开源社区来源使用规则:**
+- GitHub Releases 必须有明确的 tag 日期（如 `v0.6.0 · released today`），无日期不引用
+- GitHub Trending 只收录当天新上榜且与 AI/LLM 直接相关的项目；纯爬虫、数据集类项目跳过
+- Reddit 帖子只收录评论数 >200 或 upvote >1000 的高热帖；内容必须含具体事实（新模型跑分、新工具发布），纯讨论/吐槽帖跳过
+- 社区信息在简报中归入"📌 简讯"，不进入"🔥 必读"，除非有官方一手来源交叉验证
+
+**AI 工具新品收录门槛（Product Hunt / There's An AI For That）:**
+- 只收录满足以下至少两条的工具：① 有具体功能描述（非"AI驱动的XX平台"）；② 有可量化的性能/定价数据；③ 在 Product Hunt 日榜前 3 或周榜前 10；④ 有知名 VC 背书或创始人背景值得关注
+- 纯"AI 包装"的普通 SaaS 工具一律过滤
 
 **必须过滤掉:**
 - 标题党("震惊!""颠覆!""碾压")
