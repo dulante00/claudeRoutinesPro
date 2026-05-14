@@ -1,6 +1,31 @@
 {
   "history": [
     {
+      "date": "2026-05-14",
+      "items": [
+        {
+          "title": "Jensen Huang 临时搭乘空军一号赴京，Nvidia H200 出口解禁成中美峰会核心变量",
+          "url": "https://www.cnbc.com/2026/05/13/nvidia-says-ceo-jensen-huang-is-joining-trumps-china-trip.html"
+        },
+        {
+          "title": "Anthropic 发布 Claude for Small Business：15 个预建工作流 + 7 大工具一键集成，今日芝加哥启动全美十城路演",
+          "url": "https://techcrunch.com/2026/05/13/anthropic-courts-a-new-kind-of-customer-small-business-owners/"
+        },
+        {
+          "title": "腾讯 Q1 2026 财报：净利润增 21% 至 581 亿，Hy3 preview 登顶 OpenRouter，WorkBuddy 成国内最大 AI 智能体",
+          "url": "https://finance.sina.com.cn/tech/roll/2026-05-13/doc-inhxtzph9313035.shtml"
+        },
+        {
+          "title": "Google I/O 2026 五天后开幕（5/19-20），Gemini 4 与 Android 17 Adaptive Everywhere 有望同台亮相",
+          "url": "https://www.androidauthority.com/what-to-expect-from-google-io-2026-3664979/"
+        },
+        {
+          "title": "腾讯批准收购喜马拉雅，音乐 Q1 营收 79 亿元，AI 音乐成新增长变量",
+          "url": "https://view.inews.qq.com/a/20260512A09Z6700"
+        }
+      ]
+    },
+    {
       "date": "2026-05-13",
       "items": [
         {
@@ -187,35 +212,6 @@
         {
           "title": "微软报告：全球工作年龄人口 AI 使用率 Q1 2026 从 16.3% 升至 17.8%",
           "url": "https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-07",
-      "items": [
-        {
-          "title": "Anthropic 承诺向 Google Cloud 支出 $2000 亿，锁定 5 年 TPU 算力",
-          "url": "https://www.engadget.com/2165585/anthropic-reportedly-agrees-to-pay-google-200-billion-for-chips-and-cloud-access/"
-        },
-        {
-          "title": "Musk v. Altman 第二周庭审：前 CTO Murati 出庭作证，指 Altman 制造混乱、对高管说谎",
-          "url": "https://www.usnews.com/news/top-news/articles/2026-05-06/in-openai-trial-former-technology-chief-says-altman-sowed-chaos-distrust-among-top-executives"
-        },
-        {
-          "title": "Google 内部测试 \"Remy\"：24/7 主动型 AI 助理，将 Gemini 从回答升级为主动行动",
-          "url": "https://www.itpro.com/technology/artificial-intelligence/google-is-building-its-own-openclaw-alternative-remy-elevates-the-gemini-app-into-a-true-assistant"
-        },
-        {
-          "title": "Samsung 市值突破 $1 万亿，成亚洲第二家万亿美元公司",
-          "url": "https://www.bloomberg.com/news/articles/2026-05-06/samsung-hits-1-trillion-valuation-joining-tsmc-in-elite-club"
-        },
-        {
-          "title": "QuantWare 完成 $1.78 亿融资，量产超导量子处理器，布局 AI 时代量子硬件开放架构",
-          "url": "https://techstartups.com/2026/05/06/top-tech-news-today-may-6-2026/"
-        },
-        {
-          "title": "AMD AI 芯片业务前景超预期，带动美国芯片股全线上涨",
-          "url": "https://techstartups.com/2026/05/06/top-tech-news-today-may-6-2026/"
         }
       ]
     },
