@@ -240,6 +240,52 @@ _本简报由 Claude Code Routine 自动生成,如需调整偏好请修改 skill
 
 ---
 
+## 新闻存档规则
+
+**每次推送成功后，将当日简报以 Markdown 格式保存到 repo 的 `news/` 目录：**
+
+- 目录结构：`news/YYYY-MM/YYYYMMDD.md`
+  - 子目录按年月创建，如 `news/2026-05/`
+  - 文件按年月日命名，如 `20260514.md`
+- 内容格式：使用标准 Markdown（`**bold**`、`[text](url)`），并在文件末尾附加「微信公众号版」区块，方便直接复制发文
+- 创建时机：Slack 推送成功后，`git add` 连同 `briefing_history.json` 一起提交
+
+**微信公众号版格式要求（附加在文件末尾）：**
+
+```markdown
+---
+
+## 微信公众号版
+
+> 复制以下内容到公众号编辑器，标题建议：`AI 简报 | YYYY年MM月DD日`
+
+**今日要点：**
+
+1. **[新闻标题]** — 一句话摘要（含具体数字/名称）。[阅读原文→](URL)
+
+2. **[新闻标题]** — ...
+
+...
+
+*每日 AI 科技简报，由 Claude Code 自动整理发布。*
+```
+
+格式说明：
+- 每条新闻用加粗标题 + 一句话摘要 + 原文链接
+- 去掉 emoji 分级（公众号读者不熟悉）、改为纯数字编号
+- 段落间空一行，便于公众号编辑器排版
+- 末尾固定署名行
+
+**创建命令示例：**
+```bash
+mkdir -p news/$(date +%Y-%m)
+# 写入文件后：
+git add briefing_history.json news/$(date +%Y-%m)/$(date +%Y%m%d).md
+git commit -m "📰 更新 $(date +%Y-%m-%d) 科技简报"
+```
+
+---
+
 ## 去重机制
 
 **读取历史记录:**
@@ -360,7 +406,8 @@ mcp__Slack__slack_send_message(
 8. 通过 Slack MCP 工具推送到 #news 频道（优先）；若不可用则 curl SLACK_WEBHOOK_URL
 9. 推送成功后:
    - 更新 `briefing_history.json`
-   - `git add briefing_history.json && git commit -m "📰 更新 TODAY 科技简报"`
+   - 将简报保存到 `news/YYYY-MM/YYYYMMDD.md`（标准 Markdown 格式，供微信公众号等渠道使用）
+   - `git add briefing_history.json news/YYYY-MM/YYYYMMDD.md && git commit -m "📰 更新 TODAY 科技简报"`
    - `git push -u origin claude/daily-briefing`
 10. **合并到 main**（有实质改动时执行）:
     ```bash
