@@ -30,6 +30,22 @@
         {
           "title": "Cloudflare Project Think：为 AI Agent 打造边缘推理基础设施",
           "url": "https://blog.cloudflare.com/project-think/"
+        },
+        {
+          "title": "Samsung 45,000 员工罢工倒计时：AI 芯片供应链告急",
+          "url": "https://www.tomshardware.com/tech-industry/samsung-starts-winding-down-chip-producton-six-days-before-planned-18-day-strike"
+        },
+        {
+          "title": "OpenAI Codex 正式登陆 iOS/Android：免费版可用",
+          "url": "https://9to5mac.com/2026/05/14/openai-brings-codex-control-to-chatgpt-for-iphone-and-android/"
+        },
+        {
+          "title": "Pwn2Own Berlin 2026 首日：AI 工具 LiteLLM / NVIDIA Megatron 被零日攻破",
+          "url": "https://securityaffairs.com/192183/hacking/pwn2own-berlin-2026-day-one-523000-paid-out-ai-products-fall.html"
+        },
+        {
+          "title": "Osaurus：Apple 独占开源本地 LLM 服务器上线",
+          "url": "https://techcrunch.com/2026/05/15/osaurus-brings-both-local-and-cloud-ai-models-to-your-mac/"
         }
       ]
     },
