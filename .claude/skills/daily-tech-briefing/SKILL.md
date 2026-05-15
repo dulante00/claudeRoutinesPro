@@ -250,31 +250,28 @@ _本简报由 Claude Code Routine 自动生成,如需调整偏好请修改 skill
 - 内容格式：使用标准 Markdown（`**bold**`、`[text](url)`），并在文件末尾附加「微信公众号版」区块，方便直接复制发文
 - 创建时机：Slack 推送成功后，`git add` 连同 `briefing_history.json` 一起提交
 
-**微信公众号版格式要求（附加在文件末尾）：**
+**微信公众号版：生成 HTML 文件，浏览器粘贴**
 
-```markdown
----
+微信公众号编辑器是富文本编辑器，不支持 Markdown 直接粘贴（链接失效、出现多余符号）。
+正确做法：生成 HTML → 浏览器打开 → 全选复制 → 粘贴到公众号编辑器，链接、加粗、排版全部保留。
 
-## 微信公众号版
-
-> 复制以下内容到公众号编辑器，标题建议：`AI 简报 | YYYY年MM月DD日`
-
-**今日要点：**
-
-1. **[新闻标题]** — 一句话摘要（含具体数字/名称）。[阅读原文→](URL)
-
-2. **[新闻标题]** — ...
-
-...
-
-*每日 AI 科技简报，由 Claude Code 自动整理发布。*
+**生成命令：**
+```bash
+python3 .claude/skills/daily-tech-briefing/gen_wechat_html.py news/YYYY-MM/YYYYMMDD.html
 ```
 
-格式说明：
-- 每条新闻用加粗标题 + 一句话摘要 + 原文链接
-- 去掉 emoji 分级（公众号读者不熟悉）、改为纯数字编号
-- 段落间空一行，便于公众号编辑器排版
-- 末尾固定署名行
+**`gen_wechat_html.py` 使用说明：**
+- 位于 `.claude/skills/daily-tech-briefing/gen_wechat_html.py`
+- 每次运行前，将当日简报数据填入脚本顶部的 `MUST_READ` / `WORTH_READING` / `BRIEFS` 三个列表
+- 字符串中如需中文引号请用 `「」` 替代 `""` 以避免 Python 语法冲突
+- 脚本输出一个 HTML 文件，**用户在浏览器中打开 → Ctrl+A 全选 → Ctrl+C 复制 → 粘贴到公众号编辑器**
+
+**HTML 格式规范：**
+- 纯数字编号，去掉 emoji 分级符
+- 链接以 `<a href>` 标签呈现，粘贴后自动变为可点击超链接
+- 无任何 Markdown 语法残留（无 `[text](url)`、无 `🔗`）
+- Inline CSS 样式确保排版风格适配公众号
+- 末尾固定署名"每日 AI 科技简报，由 Claude Code 自动整理发布。"
 
 **创建命令示例：**
 ```bash
@@ -406,8 +403,9 @@ mcp__Slack__slack_send_message(
 8. 通过 Slack MCP 工具推送到 #news 频道（优先）；若不可用则 curl SLACK_WEBHOOK_URL
 9. 推送成功后:
    - 更新 `briefing_history.json`
-   - 将简报保存到 `news/YYYY-MM/YYYYMMDD.md`（标准 Markdown 格式，供微信公众号等渠道使用）
-   - `git add briefing_history.json news/YYYY-MM/YYYYMMDD.md && git commit -m "📰 更新 TODAY 科技简报"`
+   - 将简报保存为 `news/YYYY-MM/YYYYMMDD.md`（存档用 Markdown）
+   - 将当日数据填入 `gen_wechat_html.py` 并运行，生成 `news/YYYY-MM/YYYYMMDD.html`（微信公众号可直接粘贴的富文本 HTML）
+   - `git add briefing_history.json news/YYYY-MM/YYYYMMDD.md news/YYYY-MM/YYYYMMDD.html && git commit -m "📰 更新 TODAY 科技简报"`
    - `git push -u origin claude/daily-briefing`
 10. **合并到 main**（有实质改动时执行）:
     ```bash
