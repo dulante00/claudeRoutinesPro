@@ -1,6 +1,39 @@
 {
   "history": [
     {
+      "date": "2026-05-15",
+      "items": [
+        {
+          "title": "Anthropic 商业采用率历史首次超越 OpenAI",
+          "url": "https://venturebeat.com/technology/anthropic-finally-beat-openai-in-business-ai-adoption-but-3-big-threats-could-erase-its-lead"
+        },
+        {
+          "title": "Salesforce Summer '26 发布：Agentforce ARR 破 8 亿美元（+169% YoY），Tableau MCP 首推",
+          "url": "https://www.salesforce.com/news/stories/summer-2026-product-release-announcement/"
+        },
+        {
+          "title": "Trump-Xi 北京峰会收官：H200 出口框架成形，特朗普邀 Xi 9月24日访白宫",
+          "url": "https://www.gmanetwork.com/news/topstories/world/987610/trump-visit-china-xi-jinping-trade-talks-taiwan/story/"
+        },
+        {
+          "title": "Musk v. Altman：结案陈词完毕，陪审团今日开始商议",
+          "url": "https://abc7news.com/live-updates/elon-musk-sam-altman-live-updates-microsoft-ceo-satya-nadella-testify-week-3-trial-begins/19080697/"
+        },
+        {
+          "title": "xAI Grok 4.3：今日 8 款旧版模型强制退役（12:00 PM PT）",
+          "url": "https://docs.x.ai/developers/migration/may-15-retirement"
+        },
+        {
+          "title": "Salesforce Agentforce Operations：后台工作流全 Agent 化，对标 ServiceNow",
+          "url": "https://venturebeat.com/orchestration/salesforce-launches-agentforce-operations-to-fix-the-workflows-breaking-enterprise-ai"
+        },
+        {
+          "title": "Cloudflare Project Think：为 AI Agent 打造边缘推理基础设施",
+          "url": "https://blog.cloudflare.com/project-think/"
+        }
+      ]
+    },
+    {
       "date": "2026-05-14",
       "items": [
         {
@@ -221,27 +254,6 @@
           "url": "https://abc7news.com/live-updates/elon-musk-sam-altman-live-updates-trial-enters-2nd-week-focus-shifting-openai-president-greg-brockman/19036397/"
         }
       ]
-    },
-    {
-      "date": "2026-05-08",
-      "items": [
-        {
-          "title": "Google Gemini 3.1 Flash-Lite 正式 GA：Gemini 3 系列成本最低模型开放生产环境",
-          "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-1-flash-lite-is-now-generally-available"
-        },
-        {
-          "title": "Moonshot AI（Kimi）完成 $20 亿融资，估值达 $200 亿",
-          "url": "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/"
-        },
-        {
-          "title": "Musk v. Altman 庭审：Shivon Zilis 披露 Musk 曾提议让 Altman 加入 Tesla 董事会",
-          "url": "https://www.cnbc.com/2026/05/07/open-ai-trial-shivon-zilis-musk-altman-tesla-board.html"
-        },
-        {
-          "title": "微软报告：全球工作年龄人口 AI 使用率 Q1 2026 从 16.3% 升至 17.8%",
-          "url": "https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/"
-        }
-      ]
-    },
+    }
   ]
 }

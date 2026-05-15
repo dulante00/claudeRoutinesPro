@@ -9,61 +9,72 @@ import json
 from datetime import date
 
 # ── 当日简报数据（每次运行时替换此处内容）──────────────────────────────
-BRIEFING_DATE = "2026年05月14日"
-FILE_DATE = "20260514"
+BRIEFING_DATE = "2026年05月15日"
+FILE_DATE = "20260515"
 
 MUST_READ = [
     {
-        "title": "美国批准向10家中国科技公司出售 Nvidia H200，附25%收入分成，但北京叫停下单",
-        "summary": "阿里、腾讯、字节、京东等获批每家最多75,000颗 H200，须经美国境内中转并缴纳25%收入分成；然而北京指示企业暂缓下单，转而扶植华为自主芯片，实际出货量为零。",
-        "url": "https://www.cnbc.com/2026/05/14/us-clears-h200-chip-sales-to-10-china-firms-as-nvidia-ceo-looks-for-breakthrough.html",
-        "source": "CNBC",
+        "title": "Anthropic 商业采用率历史首次超越 OpenAI",
+        "summary": "Ramp AI Index 4月数据：美国商业客户中 Claude 付费采用率达 34.4%（较上月 +3.8%），首次超过 OpenAI 32.3%（-2.9%）。Anthropic 一年内从 7.94% 飙升至 34.44%；Claude Code 占全球 GitHub 公开 commits 的 4%（较上月翻倍），成为 Anthropic 史上增长最快产品。",
+        "url": "https://venturebeat.com/technology/anthropic-finally-beat-openai-in-business-ai-adoption-but-3-big-threats-could-erase-its-lead",
+        "source": "VentureBeat / Ramp",
     },
     {
-        "title": "Anthropic 拟以 $3 亿+ 收购 SDK 创企 Stainless（同时服务 OpenAI 与 Google）",
-        "summary": "Stainless 为 Anthropic、OpenAI、Google 三家生成多语言 SDK 及 MCP 服务器；收购完成后 Anthropic 将掌控竞争对手的开发者接入层，条款仍在磋商，未签意向书。",
-        "url": "https://winbuzzer.com/2026/05/14/anthropic-in-talks-to-buy-developer-tools-startup-xcxwbn/",
-        "source": "The Information",
+        "title": "Salesforce Summer '26 发布：Agentforce ARR 破 8 亿美元（+169% YoY），Tableau MCP 首推",
+        "summary": "Summer '26（6月15日上线）核心亮点：多智能体编排（Multi-Agent Orchestration）、Tableau MCP（Agent 直查 Tableau 分析引擎）、Slack First Sales、Agentforce Operations（后台工作流 Agent 化）；Agentforce ARR 8亿美元（+169%），AI 总 ARR 29亿美元。Tableau MCP 是首个将主流 BI 引擎纳入 MCP 生态的成熟方案。",
+        "url": "https://www.salesforce.com/news/stories/summer-2026-product-release-announcement/",
+        "source": "Salesforce",
     },
     {
-        "title": "Musk v. Altman 进入结案陈词：Musk 出访中国，律师代为出席道歉",
-        "summary": "Musk 律师向陪审团道歉客户缺席庭审，结案陈词当日完成。Musk 方索赔最高 $1500 亿并要求解除 Altman/Brockman 职务；最终判决权归 Yvonne Gonzalez Rogers 法官，结果近期公布。",
-        "url": "https://www.axios.com/2026/05/14/musk-closing-arguments-openai-altman",
-        "source": "Axios",
+        "title": "Trump-Xi 北京峰会收官：H200 出口框架成形，特朗普邀 Xi 9月24日访白宫",
+        "summary": "两天峰会（5/14-15）正式结束，白宫定性「进展良好」；H200 对 10 家中国科技公司出口框架基本落地，预计恢复 Nvidia 年度约 35-40 亿美元中国营收；90天关税休战（美方 145%→30%，中方 125%→10%）继续维持；特朗普邀习近平 9月24日访问白宫。",
+        "url": "https://www.gmanetwork.com/news/topstories/world/987610/trump-visit-china-xi-jinping-trade-talks-taiwan/story/",
+        "source": "GMA News / CNBC",
+    },
+    {
+        "title": "Musk v. Altman：结案陈词完毕，陪审团今日开始商议",
+        "summary": "陪审团 5/15 开始商议，裁决周内可期。Musk 律师指控 Altman 以股权自肥违反非营利使命；OpenAI 律师以 Shivon Zilis 证词反击；Ilya Sutskever 庭上披露持有约 70 亿美元 OpenAI 股权。若 Altman 被裁定违反信托义务，OpenAI 非营利转型合法性将受冲击。",
+        "url": "https://abc7news.com/live-updates/elon-musk-sam-altman-live-updates-microsoft-ceo-satya-nadella-testify-week-3-trial-begins/19080697/",
+        "source": "ABC7",
+    },
+    {
+        "title": "xAI Grok 4.3：今日 8 款旧版模型强制退役（12:00 PM PT）",
+        "summary": "grok-3、grok-4-0709、grok-4-1-fast-reasoning、grok-code-fast-1 等 8 款模型今日正式停服，API 请求自动重定向至 grok-4.3（$1.25/$2.50 per 1M tokens）；未主动迁移仍使用旧 slug 但立即按新价格计费。grok-4.3 支持 1M token 上下文、3 档可调推理强度。",
+        "url": "https://docs.x.ai/developers/migration/may-15-retirement",
+        "source": "xAI Docs",
     },
 ]
 
 WORTH_READING = [
     {
-        "title": "习近平会见马斯克、库克等随行美国科技 CEO：中国大门只会越开越大",
-        "summary": "随行代表团包括马斯克、黄仁勋、库克等，习近平明确欢迎美企加深对华合作，AI 与芯片领域具体条款预计峰会后落地。",
-        "url": "https://www.cnbc.com/2026/05/14/xi-china-open-us-business-ai-chips.html",
-        "source": "CNBC",
+        "title": "Salesforce Agentforce Operations：后台工作流全 Agent 化，对标 ServiceNow",
+        "summary": "Salesforce 独立发布 Agentforce Operations，将企业后台流程（订单处理、财务对账等）分解为 Agent 任务图，由专属 Agent 并行处理，附 Blueprint 模板库降低落地门槛。与 Summer '26 同日发布，竞争 ServiceNow 工作流自动化市场。",
+        "url": "https://venturebeat.com/orchestration/salesforce-launches-agentforce-operations-to-fix-the-workflows-breaking-enterprise-ai",
+        "source": "VentureBeat",
     },
     {
-        "title": "前阿里 Qwen 负责人林俊旸创业：世界模型 + 具身 AI，首轮估值约 $20 亿",
-        "summary": "32岁前阿里最年轻 P10 技术负责人、Qwen 系列主要负责人林俊旸为新 AI 实验室融资，首轮融后估值约 $20 亿（约人民币 136 亿），高榕资本和红杉中国洽谈参与。",
-        "url": "https://www.qbitai.com/2026/05/416963.html",
-        "source": "量子位",
-    },
-    {
-        "title": "百度 Create 2026：李彦宏提出以 DAA（日活智能体数）取代 Token 消耗衡量 AI 平台价值",
-        "summary": "李彦宏主张智能体时代应以「日活智能体数」（Daily Active Agents）而非 Token 消耗衡量平台价值，关注实际运行并交付结果的 Agent 数量，千帆 3.0 同期亮相。",
-        "url": "https://finance.sina.com.cn/tech/digi/2026-05-13/doc-inhxtkrt4626639.shtml",
-        "source": "新浪财经",
+        "title": "Cloudflare Project Think：为 AI Agent 打造边缘推理基础设施",
+        "summary": "推出 Infire 推理引擎（跨多 GPU 分布运行大模型）和 Unweight 权重压缩（节省 15-22% 推理带宽）；已托管 Moonshot Kimi K2.5 并实现 3× 提速，更多开源模型接入中。目标：让 AI Agent 在 Cloudflare 全球边缘节点稳定执行，竞争 AWS/GCP 推理服务市场。",
+        "url": "https://blog.cloudflare.com/project-think/",
+        "source": "Cloudflare Blog",
     },
 ]
 
 BRIEFS = [
     {
-        "title": "AI 开发者用 OpenAI Codex + Claude 5周复刻 RAR 压缩算法，生成5.5万行代码",
-        "url": "https://www.80aj.com/2026/05/14/ai-rar-compression-llm/",
-        "source": "80aj.com",
+        "title": "Google DeepMind Magic Pointer：Gemini 驱动智能鼠标，即将集成 Chrome",
+        "url": "https://9to5google.com/2026/05/12/deepmind-googlebook-magic-pointer/",
+        "source": "9to5Google",
     },
     {
-        "title": "H200 获批零出货：北京叫停下单，华为自主芯片路线成关键变量",
-        "url": "https://thenextweb.com/news/nvidia-h200-china-licences-huang-beijing-trip",
-        "source": "The Next Web",
+        "title": "Trump-Xi 峰会推动中国 AI 科技股大涨，腾讯/阿里等美股盘前劲升",
+        "url": "https://www.cnbc.com/2026/05/14/trump-xi-meeting-china-stocks-ai-rally.html",
+        "source": "CNBC",
+    },
+    {
+        "title": "Ramp AI Index 完整报告：过去一年 Anthropic 商业采用率增幅达 327%，OpenAI 仅增 0.3%",
+        "url": "https://ramp.com/leading-indicators/ai-index-may-2026",
+        "source": "Ramp",
     },
 ]
 # ────────────────────────────────────────────────────────────────────────────
