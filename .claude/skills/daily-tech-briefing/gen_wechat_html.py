@@ -43,6 +43,12 @@ MUST_READ = [
         "url": "https://docs.x.ai/developers/migration/may-15-retirement",
         "source": "xAI Docs",
     },
+    {
+        "title": "Samsung 45,000 员工罢工倒计时：AI 芯片供应链告急",
+        "summary": "三星半导体部门 45,000 名工人确认 5 月 21 日起 18 天大罢工，三星已启动「紧急管理模式」提前减少晶圆投入并封存光刻/蚀刻设备；TrendForce 预测全球 DRAM 产量减少 3-4%、NAND 减 2-3%，HBM 模组（AI 数据中心核心存储）供应受直接冲击，日损失或达 20 亿美元。",
+        "url": "https://www.tomshardware.com/tech-industry/samsung-starts-winding-down-chip-producton-six-days-before-planned-18-day-strike",
+        "source": "Tom's Hardware / Korea Times",
+    },
 ]
 
 WORTH_READING = [
@@ -57,6 +63,18 @@ WORTH_READING = [
         "summary": "推出 Infire 推理引擎（跨多 GPU 分布运行大模型）和 Unweight 权重压缩（节省 15-22% 推理带宽）；已托管 Moonshot Kimi K2.5 并实现 3× 提速，更多开源模型接入中。目标：让 AI Agent 在 Cloudflare 全球边缘节点稳定执行，竞争 AWS/GCP 推理服务市场。",
         "url": "https://blog.cloudflare.com/project-think/",
         "source": "Cloudflare Blog",
+    },
+    {
+        "title": "OpenAI Codex 正式登陆 iOS/Android：免费版可用",
+        "summary": "OpenAI 将 Codex 远程控制集成到 ChatGPT 手机 App（iOS/Android 全平台）；用户扫描 QR 码即可从手机审批命令、查看 diff / 测试结果、切换模型；文件与密钥保留在本地 Mac，仅执行结果推送至手机。免费计划全球覆盖，Windows 版即将上线。",
+        "url": "https://9to5mac.com/2026/05/14/openai-brings-codex-control-to-chatgpt-for-iphone-and-android/",
+        "source": "9to5Mac",
+    },
+    {
+        "title": "Pwn2Own Berlin 2026 首日：AI 工具 LiteLLM / NVIDIA Megatron 被零日攻破",
+        "summary": "Pwn2Own Berlin（5/14-16）首日 24 个零日漏洞获奖 $523,000；LiteLLM 被三漏洞链（SSRF + 代码注入）攻破（$40K），NVIDIA Megatron Bridge、OpenAI Codex API、LM Studio 同日被突破。AI 工具首次大规模成为 Pwn2Own 主要靶标，暴露 AI 推理基础设施安全短板。",
+        "url": "https://securityaffairs.com/192183/hacking/pwn2own-berlin-2026-day-one-523000-paid-out-ai-products-fall.html",
+        "source": "Security Affairs / BleepingComputer",
     },
 ]
 
@@ -75,6 +93,11 @@ BRIEFS = [
         "title": "Ramp AI Index 完整报告：过去一年 Anthropic 商业采用率增幅达 327%，OpenAI 仅增 0.3%",
         "url": "https://ramp.com/leading-indicators/ai-index-may-2026",
         "source": "Ramp",
+    },
+    {
+        "title": "Osaurus：Apple 独占开源本地 LLM 服务器上线，支持本地/云模型无缝切换",
+        "url": "https://techcrunch.com/2026/05/15/osaurus-brings-both-local-and-cloud-ai-models-to-your-mac/",
+        "source": "TechCrunch",
     },
 ]
 # ────────────────────────────────────────────────────────────────────────────
