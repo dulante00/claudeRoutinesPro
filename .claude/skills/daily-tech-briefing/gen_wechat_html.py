@@ -9,95 +9,78 @@ import json
 from datetime import date
 
 # ── 当日简报数据（每次运行时替换此处内容）──────────────────────────────
-BRIEFING_DATE = "2026年05月15日"
-FILE_DATE = "20260515"
+BRIEFING_DATE = "2026年05月16日"
+FILE_DATE = "20260516"
 
 MUST_READ = [
     {
-        "title": "Anthropic 商业采用率历史首次超越 OpenAI",
-        "summary": "Ramp AI Index 4月数据：美国商业客户中 Claude 付费采用率达 34.4%（较上月 +3.8%），首次超过 OpenAI 32.3%（-2.9%）。Anthropic 一年内从 7.94% 飙升至 34.44%；Claude Code 占全球 GitHub 公开 commits 的 4%（较上月翻倍），成为 Anthropic 史上增长最快产品。",
-        "url": "https://venturebeat.com/technology/anthropic-finally-beat-openai-in-business-ai-adoption-but-3-big-threats-could-erase-its-lead",
-        "source": "VentureBeat / Ramp",
+        "title": "OpenAI ChatGPT 推出个人理财功能：连接 12,000+ 银行账户，GPT-5.5 驱动财务问答",
+        "summary": "ChatGPT 向美国 Pro 用户开放 Finances 功能，通过 Plaid 接入 12,000+ 金融机构，提供资产仪表盘（消费/订阅/投资/净资产全景），支持跨对话「财务记忆」。GPT-5.5 负责复杂财务推理；可读取余额和交易记录，不可操作账户。先向 Pro 小规模开放，后续扩展至 Plus 和免费用户。",
+        "url": "https://openai.com/index/personal-finance-chatgpt/",
+        "source": "OpenAI 官方",
     },
     {
-        "title": "Salesforce Summer '26 发布：Agentforce ARR 破 8 亿美元（+169% YoY），Tableau MCP 首推",
-        "summary": "Summer '26（6月15日上线）核心亮点：多智能体编排（Multi-Agent Orchestration）、Tableau MCP（Agent 直查 Tableau 分析引擎）、Slack First Sales、Agentforce Operations（后台工作流 Agent 化）；Agentforce ARR 8亿美元（+169%），AI 总 ARR 29亿美元。Tableau MCP 是首个将主流 BI 引擎纳入 MCP 生态的成熟方案。",
-        "url": "https://www.salesforce.com/news/stories/summer-2026-product-release-announcement/",
-        "source": "Salesforce",
+        "title": "Google I/O 三天倒计时：Gemini 3.2 Flash + Gemini Omni 双双泄露",
+        "summary": "Gemini 3.2 Flash 悄然现身 iOS App 和 AI Studio：响应 <200ms，定价 $0.25/$2.00 per M tokens（远低于 3.1 Pro），知识截止日更新至 2026 年 1 月，编码能力接近 3.1 Pro。同期「Gemini Omni」字符串出现在视频生成标签，暗示文本/图像/视频三合一管道。主题演讲 5 月 19 日 10AM PT 全部揭晓。",
+        "url": "https://nokiapoweruser.com/gemini-3-2-flash-leak-fast-cheap-ai-google-io-2026/",
+        "source": "Nokia Power User / AIxploria",
     },
     {
-        "title": "Trump-Xi 北京峰会收官：H200 出口框架成形，特朗普邀 Xi 9月24日访白宫",
-        "summary": "两天峰会（5/14-15）正式结束，白宫定性「进展良好」；H200 对 10 家中国科技公司出口框架基本落地，预计恢复 Nvidia 年度约 35-40 亿美元中国营收；90天关税休战（美方 145%→30%，中方 125%→10%）继续维持；特朗普邀习近平 9月24日访问白宫。",
-        "url": "https://www.gmanetwork.com/news/topstories/world/987610/trump-visit-china-xi-jinping-trade-talks-taiwan/story/",
-        "source": "GMA News / CNBC",
+        "title": "Musk v. Altman：陪审团开始审议，建议性裁决与 OpenAI 万亿 IPO 悬念同步",
+        "summary": "三周庭审落幕，9 人陪审团（6 女 3 男）开始审议，裁决为「建议性」，法官 Gonzalez Rogers 最终拍板。Musk 方：Ilya Sutskever 等 5 位证人指证 Altman 说谎，诉求 $1,500 亿赔偿 + Altman 出局 + 撤销商业化改组。Musk 本人结案陈词时在北京陪特朗普访华。若法官判 Musk 胜，OpenAI 约 $1 万亿 IPO 进程或受阻。",
+        "url": "https://localnewsmatters.org/2026/05/16/musk-v-altman-week-3-analysis-jurors-face-tangled-questions-of-trust-timing-and-ai/",
+        "source": "Local News Matters / Washington Post",
     },
     {
-        "title": "Musk v. Altman：结案陈词完毕，陪审团今日开始商议",
-        "summary": "陪审团 5/15 开始商议，裁决周内可期。Musk 律师指控 Altman 以股权自肥违反非营利使命；OpenAI 律师以 Shivon Zilis 证词反击；Ilya Sutskever 庭上披露持有约 70 亿美元 OpenAI 股权。若 Altman 被裁定违反信托义务，OpenAI 非营利转型合法性将受冲击。",
-        "url": "https://abc7news.com/live-updates/elon-musk-sam-altman-live-updates-microsoft-ceo-satya-nadella-testify-week-3-trial-begins/19080697/",
-        "source": "ABC7",
-    },
-    {
-        "title": "xAI Grok 4.3：今日 8 款旧版模型强制退役（12:00 PM PT）",
-        "summary": "grok-3、grok-4-0709、grok-4-1-fast-reasoning、grok-code-fast-1 等 8 款模型今日正式停服，API 请求自动重定向至 grok-4.3（$1.25/$2.50 per 1M tokens）；未主动迁移仍使用旧 slug 但立即按新价格计费。grok-4.3 支持 1M token 上下文、3 档可调推理强度。",
-        "url": "https://docs.x.ai/developers/migration/may-15-retirement",
-        "source": "xAI Docs",
-    },
-    {
-        "title": "Samsung 45,000 员工罢工倒计时：AI 芯片供应链告急",
-        "summary": "三星半导体部门 45,000 名工人确认 5 月 21 日起 18 天大罢工，三星已启动「紧急管理模式」提前减少晶圆投入并封存光刻/蚀刻设备；TrendForce 预测全球 DRAM 产量减少 3-4%、NAND 减 2-3%，HBM 模组（AI 数据中心核心存储）供应受直接冲击，日损失或达 20 亿美元。",
-        "url": "https://www.tomshardware.com/tech-industry/samsung-starts-winding-down-chip-producton-six-days-before-planned-18-day-strike",
-        "source": "Tom's Hardware / Korea Times",
+        "title": "Samsung 5 万芯片工人 5/21 启动 18 天罢工：$34 万奖金被拒，要求 $90 万年度分红",
+        "summary": "工人拒绝一次性 $34 万美元奖金方案，对标 SK 海力士约 $90 万年度分红。JPMorgan 估算：18 天罢工令三星营业利润损失 $140 亿至 $208 亿。HBM、DRAM 全球 AI 数据中心内存价格面临上行压力。工会称 6 月 7 日罢工结束后再谈，管理层提议无条件恢复谈判。",
+        "url": "https://www.tomshardware.com/tech-industry/big-tech/samsung-chip-workers-reject-usd340-000-one-time-bonus-demand-annual-payouts-like-sk-hynixs-usd900-000-workers-want-share-of-ai-windfall-impending-18-day-strike-could-cost-samsung-up-to-usd11-7-billion",
+        "source": "Tom's Hardware",
     },
 ]
 
 WORTH_READING = [
     {
-        "title": "Salesforce Agentforce Operations：后台工作流全 Agent 化，对标 ServiceNow",
-        "summary": "Salesforce 独立发布 Agentforce Operations，将企业后台流程（订单处理、财务对账等）分解为 Agent 任务图，由专属 Agent 并行处理，附 Blueprint 模板库降低落地门槛。与 Summer '26 同日发布，竞争 ServiceNow 工作流自动化市场。",
-        "url": "https://venturebeat.com/orchestration/salesforce-launches-agentforce-operations-to-fix-the-workflows-breaking-enterprise-ai",
-        "source": "VentureBeat",
+        "title": "Anthropic + Gates Foundation 签署 $2 亿 AI 合作：聚焦全球健康、教育与农业",
+        "summary": "4 年内共投 $2 亿（含资金、Claude 用量积分和技术支持），聚焦低中收入国家医疗（脊髓灰质炎/HPV/子痫前期），以及美国和非洲/印度的 K-12 教育辅导。Anthropic 将改进 Claude 对数十种非洲语言的理解，并公开发布数据集。",
+        "url": "https://www.anthropic.com/news/gates-foundation-partnership",
+        "source": "Anthropic 官方",
     },
     {
-        "title": "Cloudflare Project Think：为 AI Agent 打造边缘推理基础设施",
-        "summary": "推出 Infire 推理引擎（跨多 GPU 分布运行大模型）和 Unweight 权重压缩（节省 15-22% 推理带宽）；已托管 Moonshot Kimi K2.5 并实现 3× 提速，更多开源模型接入中。目标：让 AI Agent 在 Cloudflare 全球边缘节点稳定执行，竞争 AWS/GCP 推理服务市场。",
-        "url": "https://blog.cloudflare.com/project-think/",
-        "source": "Cloudflare Blog",
+        "title": "GitHub Copilot Agent 模式在 Visual Studio 正式 GA + v1.0.48 定价透明化",
+        "summary": "Agent 模式支持单提示规划并执行多步骤编码任务，可跨文件推理、迭代修复错误直到目标完成。v1.0.48：模型选择器改为显示实际 token 价格（取代圆点），开发者可直观比较模型成本。",
+        "url": "https://www.havoptic.com/tools/github-copilot",
+        "source": "Havoptic Changelog",
     },
     {
-        "title": "OpenAI Codex 正式登陆 iOS/Android：免费版可用",
-        "summary": "OpenAI 将 Codex 远程控制集成到 ChatGPT 手机 App（iOS/Android 全平台）；用户扫描 QR 码即可从手机审批命令、查看 diff / 测试结果、切换模型；文件与密钥保留在本地 Mac，仅执行结果推送至手机。免费计划全球覆盖，Windows 版即将上线。",
-        "url": "https://9to5mac.com/2026/05/14/openai-brings-codex-control-to-chatgpt-for-iphone-and-android/",
-        "source": "9to5Mac",
+        "title": "Recursive Superintelligence 以 $4.65B 估值携 $6.5 亿出山，押注 AI 无监督自我改进",
+        "summary": "Richard Socher（前 Salesforce 首席科学家）+ UCL 教授 Tim Rocktäschel 创立，GV（Google VC）+ Greycroft 领投，Nvidia、AMD 参投。团队不足 30 人，核心赌注：AI 通过分析自身表现实现无人工干预的持续进化，2026 年中公开发布。",
+        "url": "https://thenextweb.com/news/recursive-superintelligence-self-improving-ai-funding",
+        "source": "The Next Web",
     },
     {
-        "title": "Pwn2Own Berlin 2026 首日：AI 工具 LiteLLM / NVIDIA Megatron 被零日攻破",
-        "summary": "Pwn2Own Berlin（5/14-16）首日 24 个零日漏洞获奖 $523,000；LiteLLM 被三漏洞链（SSRF + 代码注入）攻破（$40K），NVIDIA Megatron Bridge、OpenAI Codex API、LM Studio 同日被突破。AI 工具首次大规模成为 Pwn2Own 主要靶标，暴露 AI 推理基础设施安全短板。",
-        "url": "https://securityaffairs.com/192183/hacking/pwn2own-berlin-2026-day-one-523000-paid-out-ai-products-fall.html",
-        "source": "Security Affairs / BleepingComputer",
+        "title": "Mira Murati 的 Thinking Machines 发布「交互模型」：0.4 秒响应、276B MoE 全双工",
+        "summary": "TML-Interaction-Small 是 276B 参数 MoE 模型（同时激活 12B），实现 200ms 微回合替代传统「请求-响应」循环；全双工——AI 可同时说话、倾听并调用工具。响应延迟 0.4 秒，限量研究预览，对标 OpenAI Realtime API。",
+        "url": "https://www.marktechpost.com/2026/05/13/mira-muratis-thinking-machines-lab-introduces-interaction-models-a-native-multimodal-architecture-for-real-time-human-ai-collaboration/",
+        "source": "MarkTechPost",
     },
 ]
 
 BRIEFS = [
     {
-        "title": "Google DeepMind Magic Pointer：Gemini 驱动智能鼠标，即将集成 Chrome",
-        "url": "https://9to5google.com/2026/05/12/deepmind-googlebook-magic-pointer/",
-        "source": "9to5Google",
+        "title": "Musk v. Altman 庭审分析：Musk 诚信为何成为攻防焦点",
+        "url": "https://www.washingtonpost.com/technology/2026/05/16/elon-musk-trial-against-sam-altman-renews-questions-about-his-honesty/",
+        "source": "Washington Post",
     },
     {
-        "title": "Trump-Xi 峰会推动中国 AI 科技股大涨，腾讯/阿里等美股盘前劲升",
-        "url": "https://www.cnbc.com/2026/05/14/trump-xi-meeting-china-stocks-ai-rally.html",
-        "source": "CNBC",
+        "title": "Samsung 罢工背后：AI 芯片繁荣如何撕裂内部薪酬体系",
+        "url": "https://www.malaymail.com/amp/news/money/2026/05/16/how-samsungs-ai-chip-success-has-led-workers-to-threaten-its-biggest-ever-strike/220166",
+        "source": "Malay Mail",
     },
     {
-        "title": "Ramp AI Index 完整报告：过去一年 Anthropic 商业采用率增幅达 327%，OpenAI 仅增 0.3%",
-        "url": "https://ramp.com/leading-indicators/ai-index-may-2026",
-        "source": "Ramp",
-    },
-    {
-        "title": "Osaurus：Apple 独占开源本地 LLM 服务器上线，支持本地/云模型无缝切换",
-        "url": "https://techcrunch.com/2026/05/15/osaurus-brings-both-local-and-cloud-ai-models-to-your-mac/",
-        "source": "TechCrunch",
+        "title": "Gemini Omni 全泄露梳理：Google 统一视频/图像/文本生成管道技术细节",
+        "url": "https://lovegen.ai/blog/gemini-omni-leak-google-io-2026",
+        "source": "LoveGen AI",
     },
 ]
 # ────────────────────────────────────────────────────────────────────────────
