@@ -275,5 +275,22 @@
         }
       ]
     },
+  ],
+    {
+      "date": "2026-05-23",
+      "items": [
+        {"title": "OpenAI 秘密递交 IPO 招股书，目标 Q4 上市，估值 $8520 亿–$1 万亿", "url": "https://fortune.com/2026/05/22/openai-ipo-filing-1-trillion-may-finally-answer-these-big-questions/"},
+        {"title": "Anthropic 启动新融资，估值冲 $9000 亿超越 OpenAI，Q2 营收预测 $109 亿、史上首季盈利", "url": "https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm"},
+        {"title": "NVIDIA Q1 FY2027 财报：营收 $816 亿（同比 +85%），净利润 $583 亿创纪录", "url": "https://www.cnbc.com/2026/05/20/nvidia-nvda-earnings-report-q1-2027.html"},
+        {"title": "OpenAI 通用推理模型自主推翻 80 年未解 Erdős 单位距离猜想", "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/"},
+        {"title": "Andrej Karpathy 加入 Anthropic 预训练团队，主导「Claude 自我加速」新方向", "url": "https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/"},
+        {"title": "Google I/O 2026：Gemini 3.5 Flash 发布当日 GA，速度超旗舰模型 4 倍，$1.50/$9/M tokens", "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/"},
+        {"title": "NVIDIA 发布 Verified Agent Skills 框架，AI Agent 能力治理标准化", "url": "https://developer.nvidia.com/blog/nvidia-verified-agent-skills-provide-capability-governance-for-ai-agents/"},
+        {"title": "Anthropic 每月向 SpaceX 支付 $12.5 亿算力费用，总合同约 $450 亿", "url": "https://www.axios.com/2026/05/20/openai-ipo-spacex-musk"},
+        {"title": "特朗普在签署仪式前数小时叫停 AI 监管行政令", "url": "https://www.cnbc.com/amp/2026/05/21/trump-ai-executive-order-postponed.html"},
+        {"title": "Microsoft 开源 RAMPART + Clarity：AI Agent 安全持续工程化", "url": "https://www.microsoft.com/en-us/security/blog/2026/05/20/introducing-rampart-and-clarity-open-source-tools-to-bring-safety-into-agent-development-workflow/"},
+        {"title": "Anthropic 联创 Jack Clark 预言：AI 12 个月内助力诞生诺贝尔级科学突破", "url": "https://www.techcentral.ie/anthropic-co-founder-predicts-that-ai-will-within-a-year/"}
+      ]
+    }
   ]
 }
