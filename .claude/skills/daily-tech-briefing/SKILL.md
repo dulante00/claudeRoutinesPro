@@ -207,7 +207,6 @@ date +%Y-%m-%d
 
 ---
 
-_本简报由 Claude Code Routine 自动生成,如需调整偏好请修改 skill 文件_
 ```
 
 **格式要点:**
